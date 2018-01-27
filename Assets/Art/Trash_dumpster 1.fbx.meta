@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 48e5703624112c34bae1ac49484f1682
+timeCreated: 1517080756
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Object
+    100002: Object0010
+    100004: Object002
+    100006: Object005
+    100008: Object006
+    100010: Object007
+    100012: Object009
+    100014: Object011
+    100016: Object013
+    100018: Object015
+    100020: Object017
+    100022: Object019
+    100024: pCube1
+    100026: pCube2
+    100028: pCylinder1
+    100030: pCylinder18
+    100032: pCylinder2
+    100034: pCylinder3
+    100036: pCylinder4
+    100038: polySurface1
+    100040: polySurface10
+    100042: polySurface11
+    100044: polySurface12
+    100046: polySurface13
+    100048: polySurface14
+    100050: polySurface15
+    100052: polySurface3
+    100054: polySurface5
+    100056: polySurface7
+    100058: polySurface8
+    100060: transform1
+    100062: transform10
+    100064: transform11
+    100066: transform12
+    100068: transform13
+    100070: transform14
+    100072: transform2
+    100074: transform3
+    100076: transform4
+    100078: transform48
+    100080: transform49
+    100082: transform5
+    100084: transform50
+    100086: transform51
+    100088: transform52
+    100090: transform53
+    100092: transform54
+    100094: transform55
+    100096: transform56
+    100098: transform57
+    100100: transform58
+    100102: transform59
+    100104: transform6
+    100106: transform60
+    100108: transform61
+    100110: transform62
+    100112: transform7
+    100114: transform8
+    100116: transform9
+    100118: //RootNode
+    400000: Object
+    400002: Object0010
+    400004: Object002
+    400006: Object005
+    400008: Object006
+    400010: Object007
+    400012: Object009
+    400014: Object011
+    400016: Object013
+    400018: Object015
+    400020: Object017
+    400022: Object019
+    400024: pCube1
+    400026: pCube2
+    400028: pCylinder1
+    400030: pCylinder18
+    400032: pCylinder2
+    400034: pCylinder3
+    400036: pCylinder4
+    400038: polySurface1
+    400040: polySurface10
+    400042: polySurface11
+    400044: polySurface12
+    400046: polySurface13
+    400048: polySurface14
+    400050: polySurface15
+    400052: polySurface3
+    400054: polySurface5
+    400056: polySurface7
+    400058: polySurface8
+    400060: transform1
+    400062: transform10
+    400064: transform11
+    400066: transform12
+    400068: transform13
+    400070: transform14
+    400072: transform2
+    400074: transform3
+    400076: transform4
+    400078: transform48
+    400080: transform49
+    400082: transform5
+    400084: transform50
+    400086: transform51
+    400088: transform52
+    400090: transform53
+    400092: transform54
+    400094: transform55
+    400096: transform56
+    400098: transform57
+    400100: transform58
+    400102: transform59
+    400104: transform6
+    400106: transform60
+    400108: transform61
+    400110: transform62
+    400112: transform7
+    400114: transform8
+    400116: transform9
+    400118: //RootNode
+    2300000: pCylinder18
+    3300000: pCylinder18
+    4300000: pCylinder18
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 8a22a5c47f2c89d4eb854539d971c5a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_2
+    second: {fileID: 2100000, guid: af4671f94343fda46a67df097be56c4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dumpster_green
+    second: {fileID: 2100000, guid: b971374a3ceca1b40bfa196d83d3d878, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong1
+    second: {fileID: 2100000, guid: 4bab41381cf64444ea13af6a134d170e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

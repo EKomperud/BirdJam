@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     private float npcX;
     private float npcZ;
+    int seconds;
+    int droppedPoo;
 
     // Use this for initialization
     void Start () {
@@ -21,9 +24,23 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        updateArrow();
-        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
-        //update poop size
+        if (seconds > 299)
+        {
+            endGame();
+        }
+        else
+        {
+            seconds = (int)data.clock.ElapsedMilliseconds / 1000;
+            updateArrow();
+            updatePoopSize();
+        }
+    }
+
+    private void endGame()
+    {
+        //player.control = false;
+        data.stopTimer();
+        //tell ui to pop up game over screen
     }
 
     //UPDATE UI
@@ -36,14 +53,24 @@ public class GameManager : MonoBehaviour {
         data.updateAngle(angle);
     }
 
-    //DECREMENT IS ALWAYS NEGATIVE
-    void updatePoopSize(int decrement)
+    void updatePoopSize()
     {
 
         //get delta from timer
         //increase poop based of that
         //data.updatePoop(delta + decrement)
         //if poop size is certain size, drop automatically
+        if (data.poopSize > 99)
+        {
+            //drop nuke
+            droppedPoo = data.poopSize;
+            data.updatePoop(0);
+        }
+    }
+
+    void dropPoop()
+    {
+        data.updatePoop(0);
     }
 
     //NPCS
@@ -105,4 +132,8 @@ public class GameManager : MonoBehaviour {
         NPCCount--;
     }
 
+    void collidePoopNPC()
+    {
+        data.updateScore(-droppedPoo * 10);
+    }
 }
