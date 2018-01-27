@@ -6,7 +6,7 @@ using System.Timers;
 [CreateAssetMenu(fileName = "GameData")]
 public class GameData : ScriptableObject {
 
-    public int poopSize { get; private set; }
+    public float poopSize { get; private set; }
     public int score { get; private set; }
     public float angle { get; private set; }
     public Timer clock { get; private set; }
@@ -14,7 +14,7 @@ public class GameData : ScriptableObject {
     public bool letterCount { get; private set; }
 
     //Poop
-    public void updatePoop(int size)
+    public void updatePoop(float size)
     {
         poopSize = size;
     }

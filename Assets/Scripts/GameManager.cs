@@ -7,11 +7,20 @@ public class GameManager : MonoBehaviour {
     public GameData data;
     private int NPCCount;
     public GameObject player;
+    private static GameManager instance = null;
+
+    private float minPoopSize;
 
 
     // Use this for initialization
     void Start () {
-        data.createTimer();
+        //data.createTimer();
+
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+
+        instance = this;
+
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
@@ -21,6 +30,15 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         //updateArrow(GameObject npc);
         //update poop size
+    }
+
+    public static bool TryGetInstance(out GameManager gm)
+    {
+        gm = instance;
+        if (instance == null)
+            return false;
+        else
+            return true;
     }
 
     //UPDATE UI
@@ -95,6 +113,18 @@ public class GameManager : MonoBehaviour {
     void despawnNPC()
     {
         NPCCount--;
+    }
+
+    public bool TryPoop()
+    {
+        return true;
+
+        //if (data.poopSize >= minPoopSize)
+        //{
+        //    data.updatePoop(0f);
+        //    return true;
+        //}
+        //return false;
     }
 
 }

@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private Transform poopPrefab;
 
     // References
-    BoxCollider bxc;
+    private BoxCollider bxc;
+    private GameManager gm;
 
     // Hidden Variables
     private float currentSpeed;
@@ -32,6 +33,8 @@ public class PlayerController : MonoBehaviour {
         direction = new Vector3(0, 0, 1);
         currentSpeed = defaultSpeed;
         bxc = GetComponent<BoxCollider>();
+
+        GameManager.TryGetInstance(out gm);
 	}
 
     private void Update()
@@ -42,7 +45,12 @@ public class PlayerController : MonoBehaviour {
 
     private void AttemptPoop()
     {
-
+        if (gm.TryPoop())
+        {
+            Transform p = Instantiate(poopPrefab) as Transform;
+            Poop poop = p.GetComponent<Poop>();
+            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction);
+        }
     }
     #endregion
 
