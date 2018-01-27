@@ -26,13 +26,15 @@ public class GameManager : MonoBehaviour {
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-        data.startTimer();
+        //data.startTimer();
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
         updateArrow();
-        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
+
+        //int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
         //update poop size
     }
 

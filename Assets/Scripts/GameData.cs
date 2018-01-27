@@ -6,10 +6,10 @@ using System.Diagnostics;
 [CreateAssetMenu(fileName = "GameData")]
 public class GameData : ScriptableObject {
 
-    public float poopSize { get; private set; }
-    public int score { get; private set; }
-    public float angle { get; private set; }
-    public Stopwatch clock { get; private set; }
+    public float poopSize { get; set; }
+    public int score { get; set; }
+    public float angle { get; set; }
+    //public Stopwatch clock { get; set; }
 
     public bool letterCount { get; private set; }
 
@@ -37,18 +37,18 @@ public class GameData : ScriptableObject {
     }
 
     //Time controls
-    public void createTimer()
-    {
-        clock = new Stopwatch();
-    }
+    //public void createTimer()
+    //{
+    //    clock = new Stopwatch();
+    //}
 
-    public void startTimer()
-    {
-        clock.Start();
-    }
+    //public void startTimer()
+    //{
+    //    clock.Start();
+    //}
 
-    public void stopTimer()
-    {
-        clock.Stop();
-    }
+    //public void stopTimer()
+    //{
+    //    clock.Stop();
+    //}
 }
