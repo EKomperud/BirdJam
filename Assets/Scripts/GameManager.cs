@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
 
     private float minPoopSize;
 
+    private float npcX;
+    private float npcZ;
 
     // Use this for initialization
     void Start () {
@@ -24,11 +26,13 @@ public class GameManager : MonoBehaviour {
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
+        data.startTimer();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //updateArrow(GameObject npc);
+        updateArrow();
+        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
         //update poop size
     }
 
@@ -44,9 +48,9 @@ public class GameManager : MonoBehaviour {
     //UPDATE UI
 
     //updates arrow direction
-    void updateArrow(GameObject npc)
+    void updateArrow()
     {
-        float temp = (npc.transform.position.z - player.transform.position.z) / (npc.transform.position.x - player.transform.position.x);
+        float temp = (npcZ - player.transform.position.z) / (npcX - player.transform.position.x);
         float angle = 1/Mathf.Tan(temp);
         data.updateAngle(angle);
     }
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour {
     //DECREMENT IS ALWAYS NEGATIVE
     void updatePoopSize(int decrement)
     {
+
         //get delta from timer
         //increase poop based of that
         //data.updatePoop(delta + decrement)
@@ -65,14 +70,18 @@ public class GameManager : MonoBehaviour {
     //creates a pickup NPC
     void createPickUp()
     {
-        //specialNormies(bool pickup);
+        //temp = specialNormies(bool pickup);
+        //npcX = temp.transform.position.x;
+        //npcZ = temp.transform.position.z;
         updateNPCCount(1);
     }
 
     //creates a dropoff NPC
     void createDropOff()
     {
-        //specialNormies(bool pickup);
+        //temp = specialNormies(bool pickup);
+        //npcX = temp.transform.position.x;
+        //npcZ = temp.transform.position.z;
         //updates npc count;
     }
 
