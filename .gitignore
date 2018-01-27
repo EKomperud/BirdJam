@@ -4,7 +4,9 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
-/Library
+/Bird Shit/Library/ScriptAssemblies
+/Bird Shit/Library/assetDatabase3
+/Bird Shit/Library/metadata
 /ProjectSettings
 /UnityPackageManager
 
@@ -36,3 +38,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+#Other
+*.json
