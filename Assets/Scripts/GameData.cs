@@ -8,20 +8,32 @@ public class GameData : ScriptableObject {
 
     public int poopSize { get; private set; }
     public int score { get; private set; }
+    public float angle { get; private set; }
     public Timer clock { get; private set; }
-    public int npcCount { get; private set; }
+
+    public bool letterCount { get; private set; }
 
     //Poop
-
     public void updatePoop(int size)
     {
         poopSize = size;
     }
 
-    //change score
+    //UI stuff
+
     public void updateScore(int increment)
     {
         score += increment;
+    }
+
+    public void updateAngle(float newAngle)
+    {
+        angle = newAngle;
+    }
+
+    public void updateLetterCount(bool have)
+    {
+        letterCount = have;
     }
 
     //Time controls
@@ -38,11 +50,5 @@ public class GameData : ScriptableObject {
     public void stopTimer()
     {
         clock.Stop();
-    }
-
-    //NPC data
-    public void updateNPCCount(int increment)
-    {
-        npcCount += increment;
     }
 }
