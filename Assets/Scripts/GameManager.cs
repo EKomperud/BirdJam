@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -9,21 +11,37 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     private float npcX;
     private float npcZ;
+    int seconds;
 
     // Use this for initialization
     void Start () {
-        data.createTimer();
+        data.clock = new Stopwatch();
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-        data.startTimer();
+        updateNPCCount(1);
+        data.clock.Start();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        updateArrow();
-        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
-        //update poop size
+        if (seconds > 299)
+        {
+            endGame();
+        }
+        else
+        {
+            seconds = (int)data.clock.ElapsedMilliseconds / 1000;
+            updateArrow();
+            updatePoopSize();
+        }
+    }
+
+    private void endGame()
+    {
+        //player.control = false;
+        data.clock.Stop();
+        //tell ui to pop up game over screen
     }
 
     //UPDATE UI
@@ -33,17 +51,22 @@ public class GameManager : MonoBehaviour {
     {
         float temp = (npcZ - player.transform.position.z) / (npcX - player.transform.position.x);
         float angle = 1/Mathf.Tan(temp);
-        data.updateAngle(angle);
+        data.angle = angle;
     }
 
-    //DECREMENT IS ALWAYS NEGATIVE
-    void updatePoopSize(int decrement)
+    void updatePoopSize()
     {
+        data.poopSize = 1 + data.poopSize;
+        if (data.poopSize > 99)
+        {
+            //drop nuke
+            data.poopSize = 0;
+        }
+    }
 
-        //get delta from timer
-        //increase poop based of that
-        //data.updatePoop(delta + decrement)
-        //if poop size is certain size, drop automatically
+    void dropPoop()
+    {
+        data.poopSize = 0;
     }
 
     //NPCS
@@ -54,7 +77,6 @@ public class GameManager : MonoBehaviour {
         //temp = specialNormies(bool pickup);
         //npcX = temp.transform.position.x;
         //npcZ = temp.transform.position.z;
-        updateNPCCount(1);
     }
 
     //creates a dropoff NPC
@@ -84,9 +106,9 @@ public class GameManager : MonoBehaviour {
     //handles pickup collision
     void collidedPickUp()
     {
-        //change score
+        data.score += 50;
         //remove pickup npc
-        //add a letter to player
+        data.letterCount = true;
         //create a drop off npc
 
     }
@@ -94,9 +116,9 @@ public class GameManager : MonoBehaviour {
     //handles dropoff collision
     void collidedDropOff()
     {
-        //change score
+        data.score += 50;
         //remove dropoff npc
-        //remove letter from player
+        data.letterCount = false;
         //create a pickup npc
     }
 
@@ -105,4 +127,9 @@ public class GameManager : MonoBehaviour {
         NPCCount--;
     }
 
+    void collidePoopNPC(int droppedPoo)
+    {
+        data.score += -droppedPoo * 10;
+        data.pooHits++;
+    }
 }
