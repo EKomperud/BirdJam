@@ -12,4 +12,5 @@ public class GameData : ScriptableObject {
     public Stopwatch clock { get; set; }
     public int pooHits { get; set; }
     public bool letterCount { get; set; }
+    public List<GameObject> spawnPoints { get; set; }
 }

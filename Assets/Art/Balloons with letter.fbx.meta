@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8210bbe346968a349b7fbbd2c07ac22f
-timeCreated: 1517086236
+guid: 879bb217803e6ac488485c8c84d4447d
+timeCreated: 1517084950
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -26,17 +26,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Letter
-    second: {fileID: 2100000, guid: 0abeb251f10268c4db13d6e9e8148569, type: 2}
+    second: {fileID: 2100000, guid: 18fc414ac0e5bdc4788a78f3e6d24ff8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Red
-    second: {fileID: 2100000, guid: b85a6891bf02a5f429070d5c114872ee, type: 2}
+    second: {fileID: 2100000, guid: 001fb01e08939404f8148f2864a6a480, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: yellow
-    second: {fileID: 2100000, guid: de0688203e2712b428e1cadd9788f9aa, type: 2}
+    second: {fileID: 2100000, guid: 2670b631da2881246a3ec55ec91f20f2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
