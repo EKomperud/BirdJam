@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 386
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
@@ -90,8 +90,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 563
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 1142
     height: 563
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -357,18 +357,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\EAE-ESPORTS\Documents\BirdJam\Bird Shit
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 22270000
-    m_LastClickedID: 10018
+    m_SelectedIDs: 84270000
+    m_LastClickedID: 10116
     m_ExpandedIDs: 000000002227000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
     height: 542
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c2270000
+    m_SelectedIDs: de270000
     m_LastClickedID: 0
     m_ExpandedIDs: 8efbffff00000000
     m_RenameOverlay:
