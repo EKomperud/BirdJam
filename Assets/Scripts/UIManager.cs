@@ -10,12 +10,15 @@ public class UIManager : MonoBehaviour {
     GameObject[] pauseObjects;
     public GameData gData;
     public Text poopText;
+    public Image poopAlertPanel;
     // Use this for initialization
     void Start()
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
+        //setting alpha channel to 0
+        SetTranspernecy(0);
         gData.createTimer();
         gData.startTimer();
     }
@@ -93,7 +96,19 @@ public class UIManager : MonoBehaviour {
     {
         //poopText.text = gData.poopSize.ToString() ;
         poopText.text = ((int)(gData.clock.ElapsedMilliseconds / 1000)).ToString();
+        SetTranspernecy(gData.clock.ElapsedMilliseconds / 10000.0f);
+        
+    }
 
+    //Sets transpernacy level(alpha) for pooppanel
+    public void SetTranspernecy(float transLevel)
+    {
+        Color colorHolder;
+        colorHolder = poopAlertPanel.color;
+        Debug.Log(colorHolder.a);
+        float clampalpah = Mathf.Clamp(transLevel, 0f, 1f);
+        colorHolder.a = clampalpah;
+        poopAlertPanel.color = colorHolder;
     }
     public void QuitGame()
     {
