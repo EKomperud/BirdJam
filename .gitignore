@@ -4,9 +4,11 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
-/Bird Shit/Library/ScriptAssemblies
-/Bird Shit/Library/assetDatabase3
-/Bird Shit/Library/metadata
+/Library/ScriptAssemblies
+/Library/assetDatabase3
+/Library/metadata
+/Library/LastSceneManager.txt
+/Library/expandedItems
 /ProjectSettings
 /UnityPackageManager
 
@@ -40,3 +42,4 @@ sysinfo.txt
 
 #Other
 *.json
+*.dwlt
