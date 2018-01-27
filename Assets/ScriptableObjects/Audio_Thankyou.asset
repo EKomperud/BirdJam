@@ -9,9 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3429b5f08c9fe4cc98d3b8bab2cb1c5b, type: 3}
-  m_Name: Pigeon
+  m_Name: Audio_Thankyou
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 8c0ac67c27d0147c5b26d12bd00822c4, type: 3}
-  - {fileID: 8300000, guid: cf5e4049d88ed41e79718e5e8cc1a954, type: 3}
-  - {fileID: 8300000, guid: fe5a29de15a8c410097a2763329df872, type: 3}
+  - {fileID: 8300000, guid: 309df2a12f9234471805981a5fb07e4c, type: 3}
+  - {fileID: 8300000, guid: 34a015373729e4fa5acac65e297342e2, type: 3}

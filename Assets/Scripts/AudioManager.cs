@@ -9,9 +9,12 @@ public class AudioManager : MonoBehaviour {
 
     public AudioData ambience;
     public AudioData pigeonSound;
-    public AudioData poopSound;
+    public AudioData poopSplashSound;
+    public AudioData poopLaunchSound;
     public AudioData swearSound;
+    public AudioData thankYouSound;
     AudioSource audioSource;
+
     public static AudioManager instance { get { return _instance; }}
     // Use this for initialization
     void Awake () {
@@ -33,8 +36,8 @@ public class AudioManager : MonoBehaviour {
         audioSource.Play();
     }
 
-    public void PlayPoopSound(AudioSource source, int index){
-        source.clip = poopSound.sounds[index];
+    public void PlayPoopSplashSound(AudioSource source, int index){
+        source.clip = poopSplashSound.sounds[index];
         source.Play();
     }
 
@@ -42,13 +45,22 @@ public class AudioManager : MonoBehaviour {
         if (happy)
             source.clip = pigeonSound.sounds[Random.Range(0, 1)];
         else
-            source.clip = poopSound.sounds[2];
+            source.clip = poopSplashSound.sounds[2];
         source.Play();
+    }
 
+    public void PlayPoopLaunchSound(AudioSource source, int size){
+        source.clip = poopLaunchSound.sounds[size];
+        source.Play();
     }
 
     public void PlaySwearSound(AudioSource source){
         source.clip = swearSound.sounds[Random.Range(0, swearSound.sounds.Length - 1)];
+        source.Play();
+    }
+
+    public void PlayThankyouSound(AudioSource source){
+        source.clip = thankYouSound.sounds[Random.Range(0, thankYouSound.sounds.Length - 1)];
         source.Play();
     }
 

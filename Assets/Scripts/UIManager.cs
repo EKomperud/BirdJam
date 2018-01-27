@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
-        gData.createTimer();
-        gData.startTimer();
+        //gData.createTimer();
+        //gData.startTimer();
     }
 
     // Update is called once per frame

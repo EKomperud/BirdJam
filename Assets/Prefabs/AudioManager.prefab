@@ -49,10 +49,10 @@ AudioSource:
   m_GameObject: {fileID: 1976273029423822}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243327503869796242, guid: 9116b10833e9843288267da40c458a83,
+  OutputAudioMixerGroup: {fileID: 243162819773153180, guid: 9116b10833e9843288267da40c458a83,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -91,7 +91,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -135,5 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambience: {fileID: 11400000, guid: 7f6ab2aa480564245b0600bc73adc6a6, type: 2}
   pigeonSound: {fileID: 11400000, guid: 51180d5045cfd46fd8310c6c52ef1815, type: 2}
-  poopSound: {fileID: 11400000, guid: d4f0c3d1d855e43f59031080916b7d77, type: 2}
+  poopSplashSound: {fileID: 11400000, guid: d4f0c3d1d855e43f59031080916b7d77, type: 2}
+  poopLaunchSound: {fileID: 11400000, guid: e2abb73c0d8d348ffb1028f7e57f2fd5, type: 2}
   swearSound: {fileID: 11400000, guid: 0e3e4f300ac6941909117433c0454cbc, type: 2}
+  thankYouSound: {fileID: 11400000, guid: 37e4a187be03f4afcb784bf92c77c6fc, type: 2}

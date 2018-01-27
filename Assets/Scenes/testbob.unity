@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 632377036}
-  - component: {fileID: 632377035}
   - component: {fileID: 632377034}
   m_Layer: 0
   m_Name: GameObject
@@ -217,18 +216,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &632377035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 632377033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b124ce7127c40379ec39003586f8f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audios: {fileID: 0}
 --- !u!4 &632377036
 Transform:
   m_ObjectHideFlags: 0

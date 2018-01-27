@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3429b5f08c9fe4cc98d3b8bab2cb1c5b, type: 3}
-  m_Name: PoopSound
+  m_Name: Audio_PoopSound
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: f85d8cd97d01243cca72698b18be01db, type: 3}
