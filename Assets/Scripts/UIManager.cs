@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour {
     public Image poopAlertPanel;
     //temp until fused with game manager
     public Stopwatch clock;
+    public Slider poopSlider;
+    public Slider timeSlider;
+    public Image orbCounter;
     // Use this for initialization
     void Start()
     {
@@ -26,6 +29,10 @@ public class UIManager : MonoBehaviour {
         //gData.startTimer();
         clock = new Stopwatch();
         clock.Start();
+        poopSlider.value = 0;
+        timeSlider.value = 100;
+
+        //orbCounter.color
     }
 
     // Update is called once per frame
@@ -102,9 +109,30 @@ public class UIManager : MonoBehaviour {
     public void UpdateGUI()
     {
         //poopText.text = gData.poopSize.ToString() ;
+        float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
         poopText.text = ((int)(clock.ElapsedMilliseconds / 1000)).ToString();
         SetTranspernecy(clock.ElapsedMilliseconds / 10000.0f);
-        
+        poopSlider.value = ((int)(clock.ElapsedMilliseconds / 100));
+        timeSlider.value = 100 - (int)(clock.ElapsedMilliseconds / 100);
+        SetOrbColor(clocknumtest,clocknumtest);
+    }
+
+
+    public void SetOrbColor(float green,float blue)
+    {
+        Color colorHolder = orbCounter.color;
+        //Debug.Log(colorHolder.a);
+        /*colorHolder.g = green;
+        colorHolder.b = blue;*/
+        if (colorHolder.g > 0f)
+        {
+            colorHolder.g -= green;
+        }
+        if(colorHolder.b>0)
+        {
+           colorHolder.b -= blue;
+        }
+        orbCounter.color = colorHolder;
     }
 
     //Sets transpernacy level(alpha) for pooppanel
