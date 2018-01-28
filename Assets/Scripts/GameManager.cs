@@ -14,12 +14,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private Camera cam;
 
     [SerializeField] private Transform target;
+
+    [SerializeField] private Light dirLight;
     private float npcX;
     private float npcZ;
 
     System.Random random;
     int randomIndex;
     int seconds;
+    Vector3 targetLightDir;
     [SerializeField] private Transform NPCPrefab;
     [SerializeField] private List<GameObject> spawnPoints;
 
@@ -42,6 +45,8 @@ public class GameManager : MonoBehaviour {
         data.target = target;
         npcX = target.position.x;
         npcZ = target.position.z;
+
+        targetLightDir = new Vector3(0, 1, 1);
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
@@ -50,7 +55,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(NPCCount <= minPop)
+        //rotate light
+        dirLight.transform.rotation = Quaternion.Slerp(dirLight.transform.rotation, Quaternion.LookRotation(targetLightDir), Time.deltaTime * .007f);
+        //check if enough npcs
+        if (NPCCount <= minPop)
         {
             if(currentSpawn > spawnPoints.Count - 1)
             {

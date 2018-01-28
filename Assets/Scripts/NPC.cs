@@ -7,7 +7,6 @@ public class NPC : MonoBehaviour {
     public GameData data;
     public GameManager gm;
     public float speed;
-    Vector3 direction;
     Vector3 posDir;
     bool isSpecialNPC;
     Transform gameObjTrans;
@@ -17,7 +16,6 @@ public class NPC : MonoBehaviour {
         GameManager.TryGetInstance(out gm);
         random = new System.Random();
         posDir = new Vector3(0, 0, 1);
-        direction = new Vector3(0, 0, 1);
         //speed = .5f;
 
     }
