@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameScores : MonoBehaviour {
+public class GameScores {
 
     public int[] valuesHighscoresDelivery;
     public int[] valuesHighscoresPooper;
     public string[] namesHighscoresDelivery;
     public string[] namesHighscoresPooper;
     // Use this for initialization
-    void Start () {
+    public void Start () {
         valuesHighscoresDelivery = new int[5];
         valuesHighscoresPooper = new int[5];
         namesHighscoresDelivery = new string[5];
