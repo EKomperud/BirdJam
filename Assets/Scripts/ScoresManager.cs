@@ -12,10 +12,19 @@ public class ScoresManager : MonoBehaviour {
     public InputField nameField;
     public Button submitButton;
     public GameData gData;
+    public Text[] topMesgNames;
+    public Text[] topMesgScores;
+    public Text[] topPooperNames;
+    public Text[] topPooperScores;
 
 
     // Use this for initialization
     void Start () {
+        //topMesgNames = new Text[5];
+        //topMesgScores = new Text[5];
+        //topPooperNames = new Text[5];
+        //topPooperScores = new Text[5];
+
         LoadPlayerScores();
         if (gData.pooHits > allScores.valuesHighscoresPooper[4] || gData.score > allScores.valuesHighscoresDelivery[4])
         {
@@ -28,6 +37,8 @@ public class ScoresManager : MonoBehaviour {
             submitButton.enabled = false;
             nameField.enabled = false;
         }
+
+        SetText(topMesgNames.Length);
 	}
 	
 
@@ -36,6 +47,18 @@ public class ScoresManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //Set Text to all names from list
+    public void SetText(int topScoreSize)
+    {
+        for (int i = 0; i < topScoreSize; i++)
+        {
+            topMesgNames[i].text = allScores.namesHighscoresDelivery[i];
+            topMesgScores[i].text = allScores.valuesHighscoresDelivery[i].ToString();
+            topPooperNames[i].text = allScores.namesHighscoresPooper[i];
+            topPooperScores[i].text = allScores.valuesHighscoresPooper[i].ToString();
+        }
+    }
 
     public void SubmitScore()
     {
@@ -47,6 +70,8 @@ public class ScoresManager : MonoBehaviour {
         {
             SubmitGoodScore(gData.score,playerName);
         }
+
+
 
 
     }
