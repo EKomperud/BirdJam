@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour {
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-        createNPC(1);
-        createPickUp();
     }
 
 	
