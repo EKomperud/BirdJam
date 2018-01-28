@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour {
             seconds = (int)data.clock.ElapsedMilliseconds / 1000;
             data.poopSize += (Time.deltaTime * player.GetSpeed()) / 2f;
         }
+        minPop+=2;
     }
 
     public void endGame()
