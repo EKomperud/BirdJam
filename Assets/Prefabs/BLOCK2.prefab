@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 65310586772663564}
   m_Layer: 0
   m_Name: Fence (22)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 65817641175094926}
   m_Layer: 0
   m_Name: BuildingJ (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 65693254548553794}
   m_Layer: 0
   m_Name: Trash_can 1 (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 65916457544742424}
   m_Layer: 0
   m_Name: building5 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 65178691588356164}
   m_Layer: 0
   m_Name: Fence (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 65816463505745120}
   m_Layer: 0
   m_Name: Car yello (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 65894296261646956}
   m_Layer: 0
   m_Name: Skycraper (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 65006408683567908}
   m_Layer: 0
   m_Name: Car yello (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 65550768394187766}
   m_Layer: 0
   m_Name: Fence (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 65446153900587614}
   m_Layer: 0
   m_Name: Hot-dog stand (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 65147147629467870}
   m_Layer: 0
   m_Name: Trash_dumpster 1 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -926,7 +926,7 @@ GameObject:
   - component: {fileID: 65503932168976640}
   m_Layer: 0
   m_Name: Fence (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 65087094346676850}
   m_Layer: 0
   m_Name: Hot-dog stand (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 65520796727747296}
   m_Layer: 0
   m_Name: Trash_dumpster 1 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 65441253903871010}
   m_Layer: 0
   m_Name: Trash_can 1 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 65901082519128626}
   m_Layer: 0
   m_Name: Trash_can 2 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1319,24 +1319,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1300220595503934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4055064837020520}
-  - component: {fileID: 33740978779803820}
-  - component: {fileID: 23683681314386468}
-  - component: {fileID: 65671133124381844}
-  m_Layer: 0
-  m_Name: Trash_can 1 (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1302406507389960
 GameObject:
   m_ObjectHideFlags: 1
@@ -1350,7 +1332,7 @@ GameObject:
   - component: {fileID: 65035166516955766}
   m_Layer: 0
   m_Name: Fence (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1400,7 +1382,7 @@ GameObject:
   - component: {fileID: 65698017828678596}
   m_Layer: 0
   m_Name: Fence (11)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1528,7 +1510,7 @@ GameObject:
   - component: {fileID: 65061519269719504}
   m_Layer: 0
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,7 +1528,7 @@ GameObject:
   - component: {fileID: 65745631322965176}
   m_Layer: 0
   m_Name: Newsbox1 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1564,7 +1546,7 @@ GameObject:
   - component: {fileID: 65023801028359828}
   m_Layer: 0
   m_Name: Hot-dog stand (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1579,7 @@ GameObject:
   - component: {fileID: 65179848891471704}
   m_Layer: 0
   m_Name: Fence (15)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1647,7 +1629,7 @@ GameObject:
   - component: {fileID: 65142051482076338}
   m_Layer: 0
   m_Name: Fence (23)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1680,7 +1662,7 @@ GameObject:
   - component: {fileID: 65020093344487940}
   m_Layer: 0
   m_Name: Newsbox2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1773,7 +1755,7 @@ GameObject:
   - component: {fileID: 65017525908824632}
   m_Layer: 0
   m_Name: Fence (21)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2068,7 +2050,7 @@ GameObject:
   - component: {fileID: 65327581785872976}
   m_Layer: 0
   m_Name: Car yello (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2101,7 +2083,7 @@ GameObject:
   - component: {fileID: 65437653988179090}
   m_Layer: 0
   m_Name: Hot-dog stand (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2152,7 +2134,7 @@ GameObject:
   - component: {fileID: 65460281985797918}
   m_Layer: 0
   m_Name: Fence (19)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2357,7 +2339,7 @@ GameObject:
   - component: {fileID: 65896876092144128}
   m_Layer: 0
   m_Name: Fence (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2388,9 +2370,10 @@ GameObject:
   - component: {fileID: 33263430990333780}
   - component: {fileID: 23634570503430566}
   - component: {fileID: 65738444458797908}
+  - component: {fileID: 65560791627976636}
   m_Layer: 0
   m_Name: Middle-height building (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2546,7 +2529,7 @@ GameObject:
   - component: {fileID: 65412095783397012}
   m_Layer: 0
   m_Name: Fence (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2562,7 +2545,7 @@ GameObject:
   - component: {fileID: 65870332836868078}
   m_Layer: 0
   m_Name: building1 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2643,7 +2626,7 @@ GameObject:
   - component: {fileID: 65715655769246478}
   m_Layer: 0
   m_Name: Fence (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2926,7 +2909,7 @@ GameObject:
   - component: {fileID: 65153533123201348}
   m_Layer: 0
   m_Name: Trash_can 1 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3037,7 +3020,7 @@ GameObject:
   - component: {fileID: 65585169090121124}
   m_Layer: 0
   m_Name: Newsbox2 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3100,7 +3083,7 @@ GameObject:
   - component: {fileID: 65480569101170318}
   m_Layer: 0
   m_Name: Fence (16)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3131,6 +3114,24 @@ GameObject:
   m_Layer: 0
   m_Name: Object019
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1711153838677546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4761801831671430}
+  - component: {fileID: 33753603735425508}
+  - component: {fileID: 23929283089302272}
+  - component: {fileID: 65059510064552302}
+  m_Layer: 0
+  m_Name: Trash_can 1 (7)
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3226,7 +3227,7 @@ GameObject:
   - component: {fileID: 65530630234449478}
   m_Layer: 0
   m_Name: Fence (18)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3305,7 +3306,7 @@ GameObject:
   - component: {fileID: 4979649435586086}
   m_Layer: 0
   m_Name: Mail/News
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3321,7 +3322,7 @@ GameObject:
   - component: {fileID: 65346203352897808}
   m_Layer: 0
   m_Name: Car 2 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3339,7 +3340,7 @@ GameObject:
   - component: {fileID: 65594845414575694}
   m_Layer: 0
   m_Name: Trash_can 1 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3468,7 +3469,7 @@ GameObject:
   - component: {fileID: 65392043635339926}
   m_Layer: 0
   m_Name: Trash_can 1 (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3643,7 +3644,7 @@ GameObject:
   - component: {fileID: 65085399150831166}
   m_Layer: 0
   m_Name: Car 2 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3679,7 +3680,7 @@ GameObject:
   - component: {fileID: 65395098201447866}
   m_Layer: 0
   m_Name: Fence (12)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3710,7 +3711,7 @@ GameObject:
   - component: {fileID: 65051858150222252}
   m_Layer: 0
   m_Name: Car 2 (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3836,7 +3837,7 @@ GameObject:
   - component: {fileID: 65443918348682914}
   m_Layer: 0
   m_Name: Fence (14)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3916,7 +3917,7 @@ GameObject:
   - component: {fileID: 65985125269511146}
   m_Layer: 0
   m_Name: Car 2 (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4009,7 +4010,7 @@ GameObject:
   - component: {fileID: 65491213686293168}
   m_Layer: 0
   m_Name: Trash_dumpster 2 (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4102,7 +4103,7 @@ GameObject:
   - component: {fileID: 65414487584539360}
   m_Layer: 0
   m_Name: Fence (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4120,7 +4121,7 @@ GameObject:
   - component: {fileID: 95577839456382736}
   m_Layer: 0
   m_Name: Trash_can 1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4153,7 +4154,7 @@ GameObject:
   - component: {fileID: 65141355680990784}
   m_Layer: 0
   m_Name: Fence (13)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4199,7 +4200,7 @@ GameObject:
   - component: {fileID: 65466909342238130}
   m_Layer: 0
   m_Name: Car 3 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4217,7 +4218,7 @@ GameObject:
   - component: {fileID: 65040021092638888}
   m_Layer: 0
   m_Name: Fence (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4323,7 +4324,7 @@ GameObject:
   - component: {fileID: 65382929820751168}
   m_Layer: 0
   m_Name: building5 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4401,7 +4402,7 @@ GameObject:
   - component: {fileID: 65375282026212122}
   m_Layer: 0
   m_Name: Car 3 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4432,7 +4433,7 @@ GameObject:
   - component: {fileID: 4078228989141408}
   m_Layer: 0
   m_Name: Fences
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4493,9 +4494,10 @@ GameObject:
   - component: {fileID: 33613860528623654}
   - component: {fileID: 23426488005060394}
   - component: {fileID: 65853660894212422}
+  - component: {fileID: 65215608249540700}
   m_Layer: 0
   m_Name: Middle-height building (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4528,7 +4530,7 @@ GameObject:
   - component: {fileID: 65032632706181342}
   m_Layer: 0
   m_Name: Trash_dumpster 2 (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4563,7 +4565,7 @@ GameObject:
   - component: {fileID: 65144412054015040}
   m_Layer: 0
   m_Name: Trash_can 2 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4596,7 +4598,7 @@ GameObject:
   - component: {fileID: 65390220977122394}
   m_Layer: 0
   m_Name: Fence (20)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4645,7 +4647,7 @@ GameObject:
   - component: {fileID: 65450818728964776}
   m_Layer: 0
   m_Name: Trash_can 1 (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4739,7 +4741,7 @@ GameObject:
   - component: {fileID: 65942004276489162}
   m_Layer: 0
   m_Name: Fence (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5002,19 +5004,6 @@ Transform:
   m_Father: {fileID: 4958700147075820}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
---- !u!4 &4055064837020520
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1300220595503934}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2069397, y: 0.8976405, z: -17.24012}
-  m_LocalScale: {x: 0.17768696, y: 0.17768702, z: 0.17768697}
-  m_Children: []
-  m_Father: {fileID: 4958700147075820}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -74.864006, y: 356.057, z: -301.264}
 --- !u!4 &4059232598130568
 Transform:
   m_ObjectHideFlags: 1
@@ -7698,6 +7687,19 @@ Transform:
   m_Father: {fileID: 4780884837971584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4761801831671430
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711153838677546}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.2269, y: 0.89731, z: -16.994}
+  m_LocalScale: {x: 0.17768696, y: 0.17768702, z: 0.17768697}
+  m_Children: []
+  m_Father: {fileID: 4958700147075820}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -74.864006, y: 356.057, z: -301.264}
 --- !u!4 &4762848724664674
 Transform:
   m_ObjectHideFlags: 1
@@ -8661,11 +8663,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017450076592446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.81, y: -0.68, z: 43.8}
+  m_LocalRotation: {x: -0, y: -0.0000003874302, z: -0, w: 1}
+  m_LocalPosition: {x: 43.54, y: -0.6799998, z: -6.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4055064837020520}
+  - {fileID: 4761801831671430}
   - {fileID: 4128484613739398}
   - {fileID: 4774400490298056}
   - {fileID: 4175091412969006}
@@ -10949,47 +10951,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23683681314386468
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1300220595503934}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: ee8f2506458814a45b09551ec0c87406, type: 2}
-  - {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
-  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
-  - {fileID: 2100000, guid: d76f8037b2b251d42866fd23b6354516, type: 2}
-  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
-  - {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
-  - {fileID: 2100000, guid: ec4f7bab8e0095b41a7fa7df24ca5156, type: 2}
-  - {fileID: 2100000, guid: 0919b3897df406243a5933d17feefc31, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23689495735404380
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -11798,6 +11759,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23929283089302272
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711153838677546}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: ee8f2506458814a45b09551ec0c87406, type: 2}
+  - {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
+  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
+  - {fileID: 2100000, guid: d76f8037b2b251d42866fd23b6354516, type: 2}
+  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
+  - {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
+  - {fileID: 2100000, guid: ec4f7bab8e0095b41a7fa7df24ca5156, type: 2}
+  - {fileID: 2100000, guid: 0919b3897df406243a5933d17feefc31, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23934302224259568
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -12480,12 +12482,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451591780634336}
   m_Mesh: {fileID: 4300000, guid: ec83e35ed04a64ae5b9fac6ce05f3c6d, type: 3}
---- !u!33 &33740978779803820
+--- !u!33 &33753603735425508
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1300220595503934}
+  m_GameObject: {fileID: 1711153838677546}
   m_Mesh: {fileID: 4300000, guid: ec59207052174a74d8e5f79676aaf40a, type: 3}
 --- !u!33 &33758820644032842
 MeshFilter:
@@ -12750,6 +12752,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.443116, y: 1, z: 1.6187987}
   m_Center: {x: -0.11394284, y: 0, z: -0.1023752}
+--- !u!65 &65059510064552302
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711153838677546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8792206, y: 1.703809, z: 0.88567805}
+  m_Center: {x: -0.027592167, y: -0.01867807, z: -0.016138151}
 --- !u!65 &65061519269719504
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -12906,6 +12920,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002269001, y: 0.824523, z: 0.575726}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65215608249540700
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951949620327432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37395892, y: 0.6318414, z: 1.9241704}
+  m_Center: {x: -0.43690598, y: 0.093662456, z: 0.9620852}
 --- !u!65 &65310586772663564
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -12976,8 +13002,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33028898, y: 0.4344252, z: 0.222795}
-  m_Center: {x: -0.0013433603, y: 0.19634402, z: 0.0014367959}
+  m_Size: {x: 0.32185885, y: 0.43442523, z: 0.22279501}
+  m_Center: {x: -0.0007477284, y: 0.19634403, z: 0.0014367966}
 --- !u!65 &65390220977122394
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13230,6 +13256,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002269001, y: 0.824523, z: 0.575726}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65560791627976636
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504692105664170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37395892, y: 0.6318414, z: 1.9241704}
+  m_Center: {x: -0.43690598, y: 0.093662456, z: 0.9620852}
 --- !u!65 &65585169090121124
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13278,18 +13316,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.061310004, y: 1.0523059, z: 0.06136954}
   m_Center: {x: -0.0044108313, y: 0.49871123, z: 0.0021080142}
---- !u!65 &65671133124381844
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1300220595503934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8792206, y: 1.703809, z: 0.88567805}
-  m_Center: {x: -0.027592167, y: -0.01867807, z: -0.016138151}
 --- !u!65 &65693254548553794
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13384,8 +13410,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.86349726, y: 0.6318414, z: 1.9241701}
-  m_Center: {x: -0.1921355, y: 0.09366245, z: 0.96208507}
+  m_Size: {x: 0.86349726, y: 0.6318414, z: 0.9284459}
+  m_Center: {x: -0.19213554, y: 0.09366246, z: 0.4642228}
 --- !u!65 &65742659292210530
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13456,8 +13482,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33028898, y: 0.4344252, z: 0.21863502}
-  m_Center: {x: -0.0013433604, y: 0.19634402, z: 0.0035167844}
+  m_Size: {x: 0.33028898, y: 0.4344252, z: 0.2189339}
+  m_Center: {x: -0.0013433616, y: 0.19634402, z: -0.008364702}
 --- !u!65 &65823047829345730
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13480,8 +13506,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.86349726, y: 0.6318414, z: 1.9241701}
-  m_Center: {x: -0.1921355, y: 0.09366245, z: 0.96208507}
+  m_Size: {x: 0.86349726, y: 0.565322, z: 0.8876402}
+  m_Center: {x: -0.19213554, y: 0.086807996, z: 0.4438195}
 --- !u!65 &65870332836868078
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13528,8 +13554,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29985395, y: 0.4378014, z: 7.859171}
-  m_Center: {x: -0.02762485, y: 6.9803443e-15, z: 3.9295855}
+  m_Size: {x: 0.21221823, y: 0.3471959, z: 6.618364}
+  m_Center: {x: -0.020785594, y: -0.0046570506, z: 3.309182}
 --- !u!65 &65896876092144128
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -13564,8 +13590,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33028898, y: 0.4344252, z: 0.222795}
-  m_Center: {x: -0.0013433603, y: 0.19634402, z: 0.0014367959}
+  m_Size: {x: 0.3177154, y: 0.4344252, z: 0.222795}
+  m_Center: {x: 0.0005526298, y: 0.19634405, z: 0.0014367959}
 --- !u!65 &65942004276489162
 BoxCollider:
   m_ObjectHideFlags: 1

@@ -2943,6 +2943,7 @@ GameObject:
   - component: {fileID: 33521929621110630}
   - component: {fileID: 23756500271375722}
   - component: {fileID: 65075599302724758}
+  - component: {fileID: 65567119229789552}
   m_Layer: 0
   m_Name: Middle-height building
   m_TagString: Terrain
@@ -12186,8 +12187,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.86349726, y: 0.6318414, z: 1.9241701}
-  m_Center: {x: -0.1921355, y: 0.09366245, z: 0.96208507}
+  m_Size: {x: 0.86349744, y: 0.6318414, z: 0.93590486}
+  m_Center: {x: -0.19213551, y: 0.093662456, z: 0.46795243}
 --- !u!65 &65076425731645288
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -12656,6 +12657,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002269001, y: 0.824523, z: 0.575726}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65567119229789552
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1656265105348022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37395892, y: 0.6318414, z: 1.9241704}
+  m_Center: {x: -0.43690598, y: 0.093662456, z: 0.9620852}
 --- !u!65 &65589130144033008
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -12906,8 +12919,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.0649867, y: 15.34872, z: 2.592655}
-  m_Center: {x: 0, y: 0, z: -0.00000005960465}
+  m_Size: {x: 4.3516984, y: 15.34872, z: 1.5989555}
+  m_Center: {x: -0.03044842, y: 0, z: -0.03270172}
 --- !u!65 &65850725473383726
 BoxCollider:
   m_ObjectHideFlags: 1

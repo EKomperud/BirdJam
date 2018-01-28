@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 4058446431079054}
   m_Layer: 0
   m_Name: Mail_News
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
