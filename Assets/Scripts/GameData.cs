@@ -10,11 +10,11 @@ public class GameData : ScriptableObject {
     public float minPoopSize;
     public float maxPoopSize;
     public int score;
-    public Quaternion angle;
     public Transform target;
     public float defaultCamDistance;
     public float maxCamDistance;
     public float camAcceleration;
+    public float angle;
     public Stopwatch clock;
     public int pooHits;
     public bool letterCount;

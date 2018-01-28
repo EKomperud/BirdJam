@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(true, tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(true, tempPos);
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -93,7 +94,8 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(false, tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(false, tempPos);
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -104,7 +106,9 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(tempPos);
+        //NPC npc = new NPC(tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnNPC(tempPos);
         updateNPCCount(amount);
     }
 
