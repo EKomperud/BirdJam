@@ -7,16 +7,15 @@ public class NPC : MonoBehaviour {
     public GameData data;
     public float speed;
     Vector3 direction;
-    float yDir;
+    Vector3 posDir;
     bool isSpecialNPC;
-    Transform parentTrans;
+    Transform gameObjTrans;
     System.Random random;
-
     // Use this for initialization
     void Start () {
         random = new System.Random();
-        yDir = random.Next(0, 359);
-        direction = new Vector3(0, yDir, 0);
+        posDir = new Vector3(0, 0, 1);
+        direction = new Vector3(0, 0, 1);
         speed = .5f;
     }
 	
@@ -24,30 +23,36 @@ public class NPC : MonoBehaviour {
 	void Update () {
         if (!isSpecialNPC)
         {
-            parentTrans.position += Vector3.left * Time.deltaTime * speed;
+            gameObjTrans.position += posDir * Time.deltaTime * speed;
+            direction.x = Mathf.Lerp(gameObjTrans.transform.position.x, posDir.x, Time.deltaTime*45f);
+            direction.z = Mathf.Lerp(gameObjTrans.transform.position.z, posDir.z, Time.deltaTime*45f);
+            gameObject.transform.forward = direction;
         }
 	}
     //Spawns normal NPCs
     public void spawnNPC(Vector3 position)
     {
-        parentTrans = this.transform;
-        parentTrans.position = position;
+        gameObjTrans = this.transform;
+        gameObjTrans.position = position;
     }
     //true = pick up, false = drop off
     public void spawnSpecial(bool pickup, Vector3 position)
     {
-        parentTrans = this.transform;
-        parentTrans.position = position;
+        gameObjTrans = this.transform;
+        gameObjTrans.position = position;
         isSpecialNPC = true;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("HI");
         if(!isSpecialNPC)
         {
-            parentTrans.Rotate(direction);
-            yDir = random.Next(0, 359);
-            direction = new Vector3(0, yDir, 0);
+            posDir.x = random.Next(-1, 1);
+            posDir.z = random.Next(-1, 1);
+            while (posDir.x == 0 && posDir.z == 0)
+            {
+                posDir.x = random.Next(-1, 1);
+                posDir.z = random.Next(-1, 1);
+            }
         }
         
     }
