@@ -85,6 +85,8 @@ public class ScoresManager : MonoBehaviour {
         mesgLeaderboards.SetActive(true);
         pooperLeaderboards.SetActive(true);
         SetText(topMesgNames.Length);
+        submitButton.enabled = false;
+        nameField.enabled = false;
 
 
     }
@@ -306,6 +308,7 @@ public class ScoresManager : MonoBehaviour {
     public void LoadLevel(string level)
     {
         //Application.LoadLevel(level);
+        SavePlayerScores();
         SceneManager.LoadScene(level);
     }
 
