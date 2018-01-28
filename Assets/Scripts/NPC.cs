@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour {
     Vector3 posDir;
     bool isSpecialNPC;
     Transform gameObjTrans;
+    Target t;
     System.Random random;
     // Use this for initialization
     void Start () {
@@ -40,9 +41,11 @@ public class NPC : MonoBehaviour {
         gameObjTrans = this.transform;
         gameObjTrans.position = position;
         isSpecialNPC = true;
+        t = GetComponentInChildren<Target>();
     }
     private void OnCollisionStay(Collision collision)
     {
+        Debug.Log("NPC Collision");
         if(!isSpecialNPC)
         {
             posDir.x = random.Next(-1, 1);

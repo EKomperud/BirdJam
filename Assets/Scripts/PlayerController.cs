@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private Transform poopPrefab;
     [SerializeField] private GameData data;
     [SerializeField] private Transform arrow;
+    [SerializeField] private Transform letter;
 
     // References
     private BoxCollider bxc;
@@ -179,6 +180,11 @@ public class PlayerController : MonoBehaviour {
     public float GetSpeed()
     {
         return currentSpeed;
+    }
+
+    public void Delivery(bool pickup)
+    {
+        letter.gameObject.SetActive(pickup);
     }
 
     #endregion

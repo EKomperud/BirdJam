@@ -8039,10 +8039,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
   m_IsPrefabParent: 0
@@ -38730,6 +38726,11 @@ Prefab:
       propertyPath: spawnPoints.Array.data[29]
       value: 
       objectReference: {fileID: 1345172444}
+    - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
+        type: 2}
+      propertyPath: dirLight
+      value: 
+      objectReference: {fileID: 1596718724}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4064ad3d335b66d449599499c6edfa8e, type: 2}
   m_IsPrefabParent: 0

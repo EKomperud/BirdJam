@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour {
     int seconds;
     Vector3 targetLightDir;
     [SerializeField] private Transform NPCPrefab;
+    [SerializeField] private Transform NPC_DropOff;
+    [SerializeField] private Transform NPC_PickUp;
     [SerializeField] private List<GameObject> spawnPoints;
 
     // Use this for initialization
@@ -40,7 +43,6 @@ public class GameManager : MonoBehaviour {
         updateNPCCount(1);
         random = new System.Random();
         createPickUp();
-
 
         data.target = target;
         npcX = target.position.x;
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour {
         //player.control = false;
         data.clock.Stop();
         //tell ui to pop up game over screen
+        SceneManager.LoadScene("GameOver");
     }
 
 
@@ -101,10 +104,12 @@ public class GameManager : MonoBehaviour {
     void createPickUp()
     {
         randomIndex = random.Next(0,spawnPoints.Count);
-        Transform n = Instantiate(NPCPrefab) as Transform;
+        Transform n = Instantiate(NPC_PickUp) as Transform;
         Vector3 tempPos = spawnPoints[randomIndex].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnSpecial(true, tempPos);
+        target = n;
+        data.target = n;
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -113,10 +118,12 @@ public class GameManager : MonoBehaviour {
     void createDropOff()
     {
         randomIndex = random.Next(0, spawnPoints.Count);
-        Transform n = Instantiate(NPCPrefab) as Transform;
+        Transform n = Instantiate(NPC_DropOff) as Transform;
         Vector3 tempPos = spawnPoints[randomIndex].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnSpecial(false, tempPos);
+        target = n;
+        data.target = n;
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -140,22 +147,23 @@ public class GameManager : MonoBehaviour {
 
 
     //handles pickup collision
-    void collidedPickUp(GameObject person)
+    public void collidedPickUp(GameObject person)
     {
         data.score += 50;
         Destroy(person);
         data.letterCount = true;
         createDropOff();
-
+        player.Delivery(true);
     }
 
     //handles dropoff collision
-    void collidedDropOff(GameObject person)
+    public void collidedDropOff(GameObject person)
     {
         data.score += 50;
         Destroy(person);
         data.letterCount = false;
         createPickUp();
+        player.Delivery(false);
     }
 
     public void collidedPoop(GameObject person)
