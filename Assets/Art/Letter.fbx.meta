@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3ecce90d895b34a17a48339515e99e72
-timeCreated: 1517090379
+guid: b3771f88c7bdb344f8486a525a0b0424
+timeCreated: 1517084012
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -25,7 +25,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Letter
-    second: {fileID: 2100000, guid: 668fdd462e5db47a0bc07622175cdcc0, type: 2}
+    second: {fileID: 2100000, guid: 1f34c670706e47949ae0e595244a10ad, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

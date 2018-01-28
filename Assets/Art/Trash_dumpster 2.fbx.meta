@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d63a55dad43f7fa468cef646505fa641
-timeCreated: 1517080757
+guid: 5675c4bcbc857364da4ed3f1ece932b4
+timeCreated: 1517082759
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -21,57 +21,57 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black_2
-    second: {fileID: 2100000, guid: af4671f94343fda46a67df097be56c4b, type: 2}
+    second: {fileID: 2100000, guid: 260daf6e788f88e438aefc83774ce585, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blue
-    second: {fileID: 2100000, guid: 529e012c3ae415b4ca61903dabe86660, type: 2}
+    second: {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dumpster_skyblue
-    second: {fileID: 2100000, guid: 8118a1fe20d758e4092cfeb2507090c2, type: 2}
+    second: {fileID: 2100000, guid: c4e39bf1fd505c34292b9226c1c21c11, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Thrash_red
-    second: {fileID: 2100000, guid: 9021ade11b461ea45b95541cb70aa1db, type: 2}
+    second: {fileID: 2100000, guid: 0919b3897df406243a5933d17feefc31, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Thrash_white
-    second: {fileID: 2100000, guid: 9f32c35d4e1532b49a937d325d2b00cf, type: 2}
+    second: {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Transparent
-    second: {fileID: 2100000, guid: 9fa75128930842a428f14a5b50027837, type: 2}
+    second: {fileID: 2100000, guid: d76f8037b2b251d42866fd23b6354516, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Trash_yellow
-    second: {fileID: 2100000, guid: 9d5ec34877fbbea43bf8d5a6cad9997c, type: 2}
+    second: {fileID: 2100000, guid: ec4f7bab8e0095b41a7fa7df24ca5156, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ultrablack
-    second: {fileID: 2100000, guid: 44ec1ea3319b691429bcb30f1b203afe, type: 2}
+    second: {fileID: 2100000, guid: ee8f2506458814a45b09551ec0c87406, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: blinn2
-    second: {fileID: 2100000, guid: ee79d5ca0dd470b4db19213504346a4c, type: 2}
+    second: {fileID: 2100000, guid: 39b44c7c58f4eb04d8b9334a1eada3dc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
+    second: {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phong1
-    second: {fileID: 2100000, guid: 4bab41381cf64444ea13af6a134d170e, type: 2}
+    second: {fileID: 2100000, guid: ef81dcd56c702c44aa536d76efc5379e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

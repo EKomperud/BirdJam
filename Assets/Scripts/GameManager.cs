@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -8,24 +7,42 @@ public class GameManager : MonoBehaviour {
 
     public GameData data;
     private int NPCCount;
-    public GameObject player;
+    public PlayerController player;
+    private static GameManager instance = null;
+    [SerializeField] private Camera cam;
+
+    [SerializeField] private Transform target;
     private float npcX;
     private float npcZ;
+
     System.Random random;
     int randomIndex;
     int seconds;
     [SerializeField] private Transform NPCPrefab;
 
     // Use this for initialization
-    void Start () {
+    void Start() {
+
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        instance = this;
+
         data.clock = new Stopwatch();
+        data.clock.Start();
+
+        data.spawnPoints = new List<GameObject>();
+        updateNPCCount(1);
+        random = new System.Random();
+
+
+        data.target = target;
+        npcX = target.position.x;
+        npcZ = target.position.z;
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-        updateNPCCount(1);
-        data.clock.Start();
-        random = new System.Random();
     }
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,8 +53,7 @@ public class GameManager : MonoBehaviour {
         else
         {
             seconds = (int)data.clock.ElapsedMilliseconds / 1000;
-            updateArrow();
-            updatePoopSize();
+            data.poopSize += (Time.deltaTime * player.GetSpeed()) / 2f;
         }
     }
 
@@ -48,29 +64,14 @@ public class GameManager : MonoBehaviour {
         //tell ui to pop up game over screen
     }
 
-    //UPDATE UI
 
-    //updates arrow direction
-    void updateArrow()
+    public static bool TryGetInstance(out GameManager gm)
     {
-        float temp = (npcZ - player.transform.position.z) / (npcX - player.transform.position.x);
-        float angle = 1/Mathf.Tan(temp);
-        data.angle = angle;
-    }
-
-    void updatePoopSize()
-    {
-        data.poopSize = 1 + data.poopSize;
-        if (data.poopSize > 99)
-        {
-            //drop nuke
-            data.poopSize = 0;
-        }
-    }
-
-    void dropPoop()
-    {
-        data.poopSize = 0;
+        gm = instance;
+        if (instance == null)
+            return false;
+        else
+            return true;
     }
 
     //NPCS
@@ -143,6 +144,17 @@ public class GameManager : MonoBehaviour {
         NPCCount--;
     }
 
+    public float AttemptPoop()
+    {
+        if (data.poopSize >= data.minPoopSize)
+        {
+            float poopSize = data.poopSize;
+            data.poopSize = 0f;
+            return poopSize;
+        }
+        return 0f;
+    }
+
     void collidePoopNPC(int droppedPoo)
     {
         data.score += -droppedPoo * 10;
@@ -162,4 +174,20 @@ public class GameManager : MonoBehaviour {
             createPickUp();
         }
     }
+
+    public void PlayerDash(bool dashing)
+    {
+        //if (dashing && !cam.shaking)
+        //{
+        //    cam.shaking = true;
+        //    cam.StartShake();
+        //}
+        //else
+        //    cam.shaking = false;
+        if (dashing)
+            cam.fieldOfView = cam.fieldOfView < data.maxCamDistance ? cam.fieldOfView += data.camAcceleration : data.maxCamDistance;
+        else
+            cam.fieldOfView = cam.fieldOfView > data.defaultCamDistance ? cam.fieldOfView -= (data.camAcceleration*2) : data.defaultCamDistance;
+    }
+
 }

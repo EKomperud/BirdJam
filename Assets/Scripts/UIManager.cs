@@ -110,7 +110,6 @@ public class UIManager : MonoBehaviour {
 
     public void UpdateGUI()
     {
-        //poopText.text = gData.poopSize.ToString() ;
         float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
         //poopText.text = ((int)(clock.ElapsedMilliseconds / 1000)).ToString();
         SetTranspernecy(clock.ElapsedMilliseconds / 10000.0f);
@@ -118,7 +117,6 @@ public class UIManager : MonoBehaviour {
         timeSlider.value = 100 - (int)(clock.ElapsedMilliseconds / 100);
         SetOrbColor(clocknumtest,clocknumtest);
     }
-
 
     public void SetOrbColor(float green,float blue)
     {
