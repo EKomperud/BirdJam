@@ -87,7 +87,13 @@ public class PlayerController : MonoBehaviour {
             Transform p = Instantiate(poopPrefab) as Transform;
             Poop poop = p.GetComponent<Poop>();
             poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize, currentSpeed, gm);
-           switch((int)poopSize)
+
+            ParticleSystem s = Instantiate(shit) as ParticleSystem;
+            s.transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+            s.transform.parent = transform;
+            s.Play();
+
+            switch ((int)poopSize)
             {
                 case 1:
                 case 2:
