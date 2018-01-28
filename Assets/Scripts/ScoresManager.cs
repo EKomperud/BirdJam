@@ -10,7 +10,8 @@ public class ScoresManager : MonoBehaviour {
     private GameScores allScores;
     private string playerName;
     public InputField nameField;
-    public Button submitButton;
+    public GameObject objNameField;
+    public GameObject submitButton;
     public GameData gData;
     public GameObject mesgLeaderboards;
     public GameObject pooperLeaderboards;
@@ -29,16 +30,18 @@ public class ScoresManager : MonoBehaviour {
         mesgLeaderboards.SetActive(false);
         pooperLeaderboards.SetActive(false);
 
-        submitButton.enabled = false;
-        nameField.enabled = false;
+        
+        submitButton.SetActive(false);
+        objNameField.SetActive(false);
+        //nameField.enabled = false;
 
         LoadPlayerScores();
 
         if (gData.pooHits > allScores.valuesHighscoresPooper[4] || gData.score > allScores.valuesHighscoresDelivery[4])
         //if (gData.pooHits > 5 || gData.score > 5)
         {
-                submitButton.enabled = true;
-            nameField.enabled = true;
+            submitButton.SetActive(true);
+            objNameField.SetActive(true);
             nameField.text = "Your Name";
         }
         else
@@ -85,8 +88,8 @@ public class ScoresManager : MonoBehaviour {
         mesgLeaderboards.SetActive(true);
         pooperLeaderboards.SetActive(true);
         SetText(topMesgNames.Length);
-        submitButton.enabled = false;
-        nameField.enabled = false;
+        objNameField.SetActive(false);
+        submitButton.SetActive(false);
 
 
     }
