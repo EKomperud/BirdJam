@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4228285730678772}
   - component: {fileID: 33801622395415090}
   - component: {fileID: 23130740513389478}
-  - component: {fileID: 95000547235145006}
   m_Layer: 0
   m_Name: Streetlight
   m_TagString: Untagged
@@ -80,15 +79,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364253572955536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 123.868, y: 0.09008496, z: 82.737816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4228285730678772}
   - {fileID: 4880015930361004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4880015930361004
 Transform:
   m_ObjectHideFlags: 1
@@ -156,23 +155,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.061310004, y: 1.0523059, z: 0.06136954}
   m_Center: {x: -0.0044108313, y: 0.49871123, z: 0.0021080142}
---- !u!95 &95000547235145006
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1068276882668510}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4b3be741686480c4bab9f11f8979705e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &108017531343272872
 Light:
   m_ObjectHideFlags: 1
@@ -183,7 +165,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 130
   m_CookieSize: 10
