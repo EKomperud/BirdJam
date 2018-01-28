@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour {
         //gData.startTimer();
         clock = new Stopwatch();
         clock.Start();
-        poopSlider.value = 0;
+        poopSlider.value = gData.poopSize;
         timeSlider.value = 100;
 
         //orbCounter.color
@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-    //controls the pausing of the scene
+ /*   //controls the pausing of the scene
     public void pauseControl()
     {
         if (Mathf.Equals(Time.timeScale, 1f))
@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour {
             Time.timeScale = 1;
             hidePaused();
         }
-    }
+    }*/
 
     //shows objects with ShowOnPause tag
     public void showPaused()
