@@ -131,8 +131,10 @@ public class GameManager : MonoBehaviour {
     //creates normies
     void createNPC(int index)
     {
+        UnityEngine.Debug.Log("Spawning");
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = spawnPoints[index].transform.position;
+        tempPos.y = 0;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnNPC(tempPos);
         updateNPCCount(1);

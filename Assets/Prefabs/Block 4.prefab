@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 4242516952247178}
   m_Layer: 0
   m_Name: Block 4
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1953,6 +1953,7 @@ GameObject:
   - component: {fileID: 4256527870263926}
   - component: {fileID: 33424886843301984}
   - component: {fileID: 23743643388704210}
+  - component: {fileID: 65920059318922146}
   m_Layer: 0
   m_Name: pCube2
   m_TagString: Untagged
@@ -2121,7 +2122,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4044781976649664}
-  - component: {fileID: 65739527872254058}
   m_Layer: 0
   m_Name: building1
   m_TagString: Untagged
@@ -4524,7 +4524,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1203065261888500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.030037, y: -6.185977, z: 43.06833}
+  m_LocalPosition: {x: -28.6, y: -6.21, z: -16.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4605613791419334}
@@ -9407,18 +9407,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.061310004, y: 1.0523059, z: 0.06136954}
   m_Center: {x: -0.0044108313, y: 0.49871123, z: 0.0021080142}
---- !u!65 &65739527872254058
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547948839846556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.33028898, y: 0.4344252, z: 0.222795}
-  m_Center: {x: -0.81, y: 0.19634402, z: 0.0014367959}
 --- !u!65 &65827809394281228
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -9443,6 +9431,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.2104893, y: 1, z: 1.5023991}
   m_Center: {x: -0.08400346, y: 0, z: -0.032751285}
+--- !u!65 &65920059318922146
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512887942737382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31724766, y: 0.44144675, z: 0.23149304}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0}
 --- !u!65 &65951629046675720
 BoxCollider:
   m_ObjectHideFlags: 1
