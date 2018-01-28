@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour {
     public GameData data;
+    public GameManager gm;
     public float speed;
     Vector3 direction;
     Vector3 posDir;
@@ -13,19 +14,21 @@ public class NPC : MonoBehaviour {
     System.Random random;
     // Use this for initialization
     void Start () {
+        GameManager.TryGetInstance(out gm);
         random = new System.Random();
         posDir = new Vector3(0, 0, 1);
         direction = new Vector3(0, 0, 1);
-        speed = .5f;
+        //speed = .5f;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (!isSpecialNPC)
         {
-            gameObjTrans.position += posDir * Time.deltaTime * speed;
-            direction.x = Mathf.Lerp(gameObjTrans.transform.position.x, posDir.x, Time.deltaTime*45f);
-            direction.z = Mathf.Lerp(gameObjTrans.transform.position.z, posDir.z, Time.deltaTime*45f);
+            transform.position += posDir * Time.deltaTime * speed;
+            direction.x = Mathf.Lerp(transform.position.x, posDir.x, Time.deltaTime*45f);
+            direction.z = Mathf.Lerp(transform.position.z, posDir.z, Time.deltaTime*45f);
             gameObject.transform.forward = direction;
         }
 	}
@@ -52,6 +55,11 @@ public class NPC : MonoBehaviour {
             {
                 posDir.x = random.Next(-1, 1);
                 posDir.z = random.Next(-1, 1);
+            }
+            if(collision.gameObject.tag == "killzone")
+            {
+                gm.despawnNPC();
+                Destroy(this.gameObject);
             }
         }
         
