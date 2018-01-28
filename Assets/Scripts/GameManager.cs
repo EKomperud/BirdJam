@@ -96,7 +96,11 @@ public class GameManager : MonoBehaviour {
         //player.control = false;
         data.clock.Stop();
         //tell ui to pop up game over screen
-        SceneManager.LoadScene("GameOver");
+        //SceneManager.LoadScene("GameOver");
+        if (data.pooHits >= 5)
+            SceneManager.LoadScene("BadEnding");
+        else
+            SceneManager.LoadScene("GoodEnding");
     }
 
 
@@ -200,15 +204,16 @@ public class GameManager : MonoBehaviour {
         return 0f;
     }
 
-    void collidePoopNPC(int droppedPoo)
+    public void collidePoopNPC(GameObject person, float droppedPoo)
     {
-        data.score += -droppedPoo * 10;
+        //data.score += -droppedPoo * 10;
         data.pooHits++;
+        Destroy(person);
     }
 
     void collidePoopSpecial(int droppedPoo)
     {
-        collidePoopNPC(droppedPoo);
+        //collidePoopNPC(droppedPoo);
         //despawn special npc
         if(data.letterCount)
         {
