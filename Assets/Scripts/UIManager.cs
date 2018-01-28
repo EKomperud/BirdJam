@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour {
 
     //used https://www.sitepoint.com/building-a-dodger-game-clone-in-unity/
     GameObject[] pauseObjects;
+    public GameObject poopFrameObj;
     public GameData gData;
     //public Text poopText;
     public Image poopAlertPanel;
@@ -23,6 +24,7 @@ public class UIManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        poopFrameObj.SetActive(true);
         hidePaused();
         //gData.createTimer();
         //gData.startTimer();
@@ -50,6 +52,7 @@ public class UIManager : MonoBehaviour {
                 Time.timeScale = 0;
                 gData.clock.Stop();
                 showPaused();
+                poopFrameObj.SetActive(false);
             }
             else if (Time.timeScale == 0)
             {
@@ -57,6 +60,7 @@ public class UIManager : MonoBehaviour {
                 Time.timeScale = 1;
                 gData.clock.Start();
                 hidePaused();
+                poopFrameObj.SetActive(true);
             }
         }
     }
