@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -14,15 +15,25 @@ public class GameManager : MonoBehaviour {
     private float npcX;
     private float npcZ;
 
+    System.Random random;
+    int randomIndex;
+    int seconds;
+    [SerializeField] private Transform NPCPrefab;
+
     // Use this for initialization
-    void Start () {
+    void Start() {
 
         if (instance != null && instance != this)
             Destroy(gameObject);
         instance = this;
 
-        data.createTimer();
-        data.startTimer();
+        data.clock = new Stopwatch();
+        data.clock.Start();
+
+        data.spawnPoints = new List<GameObject>();
+        updateNPCCount(1);
+        random = new System.Random();
+
 
         data.target = target;
         npcX = target.position.x;
@@ -30,17 +41,29 @@ public class GameManager : MonoBehaviour {
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-
     }
 
-    // Update is called once per frame
-    void Update () {
-        updateArrow();
-
-        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
-
-        data.poopSize += (Time.deltaTime * player.GetSpeed())/2f;
+	
+	// Update is called once per frame
+	void Update () {
+        if (seconds > 299)
+        {
+            endGame();
+        }
+        else
+        {
+            seconds = (int)data.clock.ElapsedMilliseconds / 1000;
+            data.poopSize += (Time.deltaTime * player.GetSpeed()) / 2f;
+        }
     }
+
+    private void endGame()
+    {
+        //player.control = false;
+        data.clock.Stop();
+        //tell ui to pop up game over screen
+    }
+
 
     public static bool TryGetInstance(out GameManager gm)
     {
@@ -51,40 +74,37 @@ public class GameManager : MonoBehaviour {
             return true;
     }
 
-    //DECREMENT IS ALWAYS NEGATIVE
-    void updatePoopSize(int decrement)
-    {
-
-        //get delta from timer
-        //increase poop based of that
-        //data.updatePoop(delta + decrement)
-        //if poop size is certain size, drop automatically
-    }
-
     //NPCS
 
     //creates a pickup NPC
     void createPickUp()
     {
-        //temp = specialNormies(bool pickup);
-        //npcX = temp.transform.position.x;
-        //npcZ = temp.transform.position.z;
-        updateNPCCount(1);
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        NPC npc = new NPC(true, tempPos);
+        npcX = tempPos.x;
+        npcZ = tempPos.y;
     }
 
     //creates a dropoff NPC
     void createDropOff()
     {
-        //temp = specialNormies(bool pickup);
-        //npcX = temp.transform.position.x;
-        //npcZ = temp.transform.position.z;
-        //updates npc count;
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        NPC npc = new NPC(false, tempPos);
+        npcX = tempPos.x;
+        npcZ = tempPos.y;
     }
 
     //creates normies
     void createNPC(int amount)
     {
-        //call NPC code to spawn npcs
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        NPC npc = new NPC(tempPos);
         updateNPCCount(amount);
     }
 
@@ -97,22 +117,22 @@ public class GameManager : MonoBehaviour {
 
 
     //handles pickup collision
-    void collidedPickUp()
+    void collidedPickUp(GameObject person)
     {
-        //change score
-        //remove pickup npc
-        //add a letter to player
-        //create a drop off npc
+        data.score += 50;
+        Destroy(person);
+        data.letterCount = true;
+        createDropOff();
 
     }
 
     //handles dropoff collision
-    void collidedDropOff()
+    void collidedDropOff(GameObject person)
     {
-        //change score
-        //remove dropoff npc
-        //remove letter from player
-        //create a pickup npc
+        data.score += 50;
+        Destroy(person);
+        data.letterCount = false;
+        createPickUp();
     }
 
     void despawnNPC()
@@ -120,7 +140,7 @@ public class GameManager : MonoBehaviour {
         NPCCount--;
     }
 
-    public float TryPoop()
+    public float AttemptPoop()
     {
         if (data.poopSize >= data.minPoopSize)
         {
@@ -129,6 +149,26 @@ public class GameManager : MonoBehaviour {
             return poopSize;
         }
         return 0f;
+    }
+
+    void collidePoopNPC(int droppedPoo)
+    {
+        data.score += -droppedPoo * 10;
+        data.pooHits++;
+    }
+
+    void collidePoopSpecial(int droppedPoo)
+    {
+        collidePoopNPC(droppedPoo);
+        //despawn special npc
+        if(data.letterCount)
+        {
+            createDropOff();
+        }
+        else
+        {
+            createPickUp();
+        }
     }
 
     public void PlayerDash(bool dashing)

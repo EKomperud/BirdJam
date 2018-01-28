@@ -16,8 +16,9 @@ public class GameData : ScriptableObject {
     public float maxCamDistance;
     public float camAcceleration;
     public Stopwatch clock;
-
-    public bool letterCount { get; private set; }
+    public int pooHits;
+    public bool letterCount;
+    public List<GameObject> spawnPoints;
 
     //Poop
     public void updatePoop(float size)

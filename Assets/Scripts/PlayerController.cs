@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 
     private void AttemptPoop()
     {
-        float poopSize = gm.TryPoop();
+        float poopSize = gm.AttemptPoop();
         if (poopSize != 0)
         {
             Transform p = Instantiate(poopPrefab) as Transform;
