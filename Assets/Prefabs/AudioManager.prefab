@@ -139,3 +139,6 @@ MonoBehaviour:
   poopLaunchSound: {fileID: 11400000, guid: e2abb73c0d8d348ffb1028f7e57f2fd5, type: 2}
   swearSound: {fileID: 11400000, guid: 0e3e4f300ac6941909117433c0454cbc, type: 2}
   thankYouSound: {fileID: 11400000, guid: 37e4a187be03f4afcb784bf92c77c6fc, type: 2}
+  BGM: {fileID: 11400000, guid: fd8515e3d3c914f8f864c6e06629d84d, type: 2}
+  MenuBGM: {fileID: 11400000, guid: e831df84c6ac449eeb91c77fe41270bc, type: 2}
+  BalloonSound: {fileID: 11400000, guid: b9d94a1e8f6e444eeb50c5e2d5808819, type: 2}

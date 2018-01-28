@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3429b5f08c9fe4cc98d3b8bab2cb1c5b, type: 3}
   m_Name: Audio_BGM
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 61f806301c46e40a1809e4853058b661, type: 3}
+  - {fileID: 8300000, guid: 99cf4963d6dc746f1876520863f25957, type: 3}

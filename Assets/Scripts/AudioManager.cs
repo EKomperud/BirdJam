@@ -13,6 +13,10 @@ public class AudioManager : MonoBehaviour {
     public AudioData poopLaunchSound;
     public AudioData swearSound;
     public AudioData thankYouSound;
+    public AudioData BGM;
+    public AudioData MenuBGM;
+    public AudioData BalloonSound;
+
     AudioSource audioSource;
 
     public static AudioManager instance { get { return _instance; }}
@@ -27,9 +31,10 @@ public class AudioManager : MonoBehaviour {
 	}
 	
     void Start(){
-        audioSource.clip = ambience.sounds[0];
+        //audioSource.clip = ambience.sounds[0];
         //audioSource.clip = poopSound.sounds[3];
         //audioSource.Play();
+        StartCoroutine(PlayBGM());
     }
 
     public void PlayAmbience(){
@@ -64,4 +69,23 @@ public class AudioManager : MonoBehaviour {
         source.Play();
     }
 
+    public IEnumerator PlayBGM()
+    {
+        audioSource.clip = BGM.sounds[0];
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        audioSource.clip = BGM.sounds[1];
+        audioSource.Play();
+    }
+
+    public void PlayMenuBGM()
+    {
+        audioSource.clip = MenuBGM.sounds[0];
+        audioSource.Play();
+    }
+
+    public void PlayBalloonSound(AudioSource source){
+        source.clip = BalloonSound.sounds[0];
+        source.Play();
+    }
 }
