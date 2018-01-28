@@ -6,6 +6,7 @@ public class Poop : MonoBehaviour {
 
     [SerializeField] private float lifetime;
 
+    private float size;
     private Vector3 direction;
 
     private void FixedUpdate()
@@ -18,9 +19,11 @@ public class Poop : MonoBehaviour {
             Destroy(gameObject);
     }
 
-    public void SpawnPoop(Vector3 position, Vector3 direction)
+    public void SpawnPoop(Vector3 position, Vector3 direction, float size)
     {
         transform.position = position;
         this.direction = direction;
+        transform.localScale = transform.localScale *= size;
+        this.size = size;
     }
 }

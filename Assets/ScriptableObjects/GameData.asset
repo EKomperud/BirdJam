@@ -11,3 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245155edb8c82b4ab038eb10031fc77, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
+  poopSize: 3.6255043
+  minPoopSize: 1
+  maxPoopSize: 6
+  score: 0
+  angle: NaN
+  defaultCamDistance: 60
+  maxCamDistance: 70
+  camAcceleration: 0.5

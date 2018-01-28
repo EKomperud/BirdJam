@@ -6,10 +6,16 @@ using System.Diagnostics;
 [CreateAssetMenu(fileName = "GameData")]
 public class GameData : ScriptableObject {
 
-    public float poopSize { get; set; }
-    public int score { get; set; }
-    public float angle { get; set; }
-    //public Stopwatch clock { get; set; }
+    public float poopSize;
+    public float minPoopSize;
+    public float maxPoopSize;
+    public int score;
+    public Quaternion angle;
+    public Transform target;
+    public float defaultCamDistance;
+    public float maxCamDistance;
+    public float camAcceleration;
+    public Stopwatch clock;
 
     public bool letterCount { get; private set; }
 
@@ -26,10 +32,10 @@ public class GameData : ScriptableObject {
         score += increment;
     }
 
-    public void updateAngle(float newAngle)
-    {
-        angle = newAngle;
-    }
+    //public void updateAngle(float newAngle)
+    //{
+    //    angle = newAngle;
+    //}
 
     public void updateLetterCount(bool have)
     {
@@ -37,18 +43,18 @@ public class GameData : ScriptableObject {
     }
 
     //Time controls
-    //public void createTimer()
-    //{
-    //    clock = new Stopwatch();
-    //}
+    public void createTimer()
+    {
+        clock = new Stopwatch();
+    }
 
-    //public void startTimer()
-    //{
-    //    clock.Start();
-    //}
+    public void startTimer()
+    {
+        clock.Start();
+    }
 
-    //public void stopTimer()
-    //{
-    //    clock.Stop();
-    //}
+    public void stopTimer()
+    {
+        clock.Stop();
+    }
 }

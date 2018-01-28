@@ -6,16 +6,20 @@ public class PlayerController : MonoBehaviour {
 
     #region Member Variables
     // Inspector Variables
-    [Header("Speed Settings")]
+    [Header("Movement/Rotation Settings")]
     [SerializeField] private float defaultSpeed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
-    [SerializeField] private float maxRotation;
-    [SerializeField] private float rotateSpeed;
+    [SerializeField] private float maxRotationX;
+    [SerializeField] private float rotateSpeedX;
+    [SerializeField] private float maxRotationZ;
+    [SerializeField] private float rotateSpeedZ;
 
     // Inspector References
     [Header("References")]
     [SerializeField] private Transform poopPrefab;
+    [SerializeField] private GameData data;
+    [SerializeField] private Transform arrow;
 
     // References
     private BoxCollider bxc;
@@ -24,7 +28,8 @@ public class PlayerController : MonoBehaviour {
     // Hidden Variables
     private float currentSpeed;
     private Vector3 direction;
-    private float rotateFactor;
+    private float rotateFactorX;
+    private float rotateFactorZ;
     #endregion
 
     #region MonoBehaviour
@@ -41,15 +46,19 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
             AttemptPoop();
+
+        if (data.poopSize >= data.maxPoopSize)
+            AttemptPoop();
     }
 
     private void AttemptPoop()
     {
-        if (gm.TryPoop())
+        float poopSize = gm.TryPoop();
+        if (poopSize != 0)
         {
             Transform p = Instantiate(poopPrefab) as Transform;
             Poop poop = p.GetComponent<Poop>();
-            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction);
+            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize);
         }
     }
     #endregion
@@ -59,6 +68,7 @@ public class PlayerController : MonoBehaviour {
     {
         DoRotation();
         DoAcceleration();
+        DoArrowUpdate();
 
         transform.position += (direction * currentSpeed * Time.deltaTime);
     }
@@ -66,12 +76,12 @@ public class PlayerController : MonoBehaviour {
     private void DoRotation()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
-            rotateFactor = rotateFactor >= -maxRotation ? rotateFactor -= rotateSpeed : -maxRotation;
+            rotateFactorX = rotateFactorX >= -maxRotationX ? rotateFactorX -= rotateSpeedX : -maxRotationX;
         else if (Input.GetKey(KeyCode.RightArrow))
-            rotateFactor = rotateFactor <= maxRotation ? rotateFactor += rotateSpeed : maxRotation;
+            rotateFactorX = rotateFactorX <= maxRotationX ? rotateFactorX += rotateSpeedX : maxRotationX;
         else
-            rotateFactor = Mathf.Abs(rotateFactor) >= 0.05f ? rotateFactor *= 0.90f : 0;
-        transform.Rotate(new Vector3(0f, rotateFactor, 0f));
+            rotateFactorX = Mathf.Abs(rotateFactorX) >= 0.05f ? rotateFactorX *= 0.90f : 0;
+        transform.Rotate(new Vector3(0f, rotateFactorX, 0f));
 
         float yAngle = transform.rotation.eulerAngles.y % 360;
         float ratio = Mathf.Tan(yAngle * Mathf.Deg2Rad);
@@ -97,10 +107,27 @@ public class PlayerController : MonoBehaviour {
 
     private void DoAcceleration()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        bool upKey = Input.GetKey(KeyCode.UpArrow);
+        if (upKey)
             currentSpeed = currentSpeed <= maxSpeed ? currentSpeed += acceleration : maxSpeed;
         else
             currentSpeed = currentSpeed >= defaultSpeed ? currentSpeed -= acceleration : defaultSpeed;
+
+        gm.PlayerDash(upKey);
     }
+
+    private void DoArrowUpdate()
+    {
+        arrow.transform.LookAt(data.target, Vector3.up);
+    }
+    #endregion
+
+    #region External Functions
+
+    public float GetSpeed()
+    {
+        return currentSpeed;
+    }
+
     #endregion
 }

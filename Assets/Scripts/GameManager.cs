@@ -6,36 +6,40 @@ public class GameManager : MonoBehaviour {
 
     public GameData data;
     private int NPCCount;
-    public GameObject player;
+    public PlayerController player;
     private static GameManager instance = null;
+    [SerializeField] private Camera cam;
 
-    private float minPoopSize;
-
+    [SerializeField] private Transform target;
     private float npcX;
     private float npcZ;
 
     // Use this for initialization
     void Start () {
-        //data.createTimer();
 
         if (instance != null && instance != this)
             Destroy(gameObject);
-
         instance = this;
 
+        data.createTimer();
+        data.startTimer();
+
+        data.target = target;
+        npcX = target.position.x;
+        npcZ = target.position.z;
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
-        //data.startTimer();
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         updateArrow();
 
-        //int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
-        //update poop size
+        int seconds = (int)data.clock.ElapsedMilliseconds / 1000;
+
+        data.poopSize += (Time.deltaTime * player.GetSpeed())/2f;
     }
 
     public static bool TryGetInstance(out GameManager gm)
@@ -45,16 +49,6 @@ public class GameManager : MonoBehaviour {
             return false;
         else
             return true;
-    }
-
-    //UPDATE UI
-
-    //updates arrow direction
-    void updateArrow()
-    {
-        float temp = (npcZ - player.transform.position.z) / (npcX - player.transform.position.x);
-        float angle = 1/Mathf.Tan(temp);
-        data.updateAngle(angle);
     }
 
     //DECREMENT IS ALWAYS NEGATIVE
@@ -126,16 +120,30 @@ public class GameManager : MonoBehaviour {
         NPCCount--;
     }
 
-    public bool TryPoop()
+    public float TryPoop()
     {
-        return true;
+        if (data.poopSize >= data.minPoopSize)
+        {
+            float poopSize = data.poopSize;
+            data.poopSize = 0f;
+            return poopSize;
+        }
+        return 0f;
+    }
 
-        //if (data.poopSize >= minPoopSize)
+    public void PlayerDash(bool dashing)
+    {
+        //if (dashing && !cam.shaking)
         //{
-        //    data.updatePoop(0f);
-        //    return true;
+        //    cam.shaking = true;
+        //    cam.StartShake();
         //}
-        //return false;
+        //else
+        //    cam.shaking = false;
+        if (dashing)
+            cam.fieldOfView = cam.fieldOfView < data.maxCamDistance ? cam.fieldOfView += data.camAcceleration : data.maxCamDistance;
+        else
+            cam.fieldOfView = cam.fieldOfView > data.defaultCamDistance ? cam.fieldOfView -= (data.camAcceleration*2) : data.defaultCamDistance;
     }
 
 }
