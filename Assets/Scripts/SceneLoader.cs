@@ -7,11 +7,15 @@ public class SceneLoader : MonoBehaviour {
 
     public string levelName;
     public float timer = 0f;
+
 	
 	void Update () {
-        if (timer <= 2f)
+        if (timer <= 10f)
             timer += Time.deltaTime;
-        else if (Input.anyKey)
-            SceneManager.LoadScene("TempMainMenu");
+        else
+            SceneManager.LoadScene("GameOver");
+        if (Input.anyKey)
+            SceneManager.LoadScene("GameOver");
+        
     }
 }
