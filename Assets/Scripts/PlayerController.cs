@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private GameData data;
     [SerializeField] private Transform arrow;
     [SerializeField] private Transform letter;
+    [SerializeField] private ParticleSystem shit;
+    [SerializeField] private ParticleSystem poof;
 
     // References
     private BoxCollider bxc;
@@ -54,6 +56,14 @@ public class PlayerController : MonoBehaviour {
 
         if (data.poopSize >= data.maxPoopSize)
             AttemptPoop();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Terrain"))
+        {
+
+        }
     }
 
     private void AttemptPoop()

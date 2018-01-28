@@ -2207,7 +2207,7 @@ GameObject:
   - component: {fileID: 4449553106234230}
   m_Layer: 0
   m_Name: Block 3 (test)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6223,7 +6223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1480820179135830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.85892, y: 0.69787216, z: 75.28728}
+  m_LocalPosition: {x: 3.99, y: 0.69, z: 15.648464}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4505905128461716}

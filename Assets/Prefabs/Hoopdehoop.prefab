@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65970078199153612}
   m_Layer: 0
   m_Name: Hoopdehoop
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
