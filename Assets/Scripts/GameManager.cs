@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
     int randomIndex;
     int seconds;
     [SerializeField] private Transform NPCPrefab;
+    [SerializeField] private List<GameObject> spawnPoints;
 
     // Use this for initialization
     void Start() {
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour {
 
         updateNPCCount(1);
         random = new System.Random();
+        createPickUp();
 
 
         data.target = target;
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if(NPCCount <= minPop)
         {
-            if(currentSpawn > data.spawnPoints.Count - 1)
+            if(currentSpawn > spawnPoints.Count - 1)
             {
                 currentSpawn = 0;
             }
@@ -90,9 +92,9 @@ public class GameManager : MonoBehaviour {
     //creates a pickup NPC
     void createPickUp()
     {
-        randomIndex = random.Next(0, data.spawnPoints.Count);
+        randomIndex = random.Next(0,spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
-        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        Vector3 tempPos = spawnPoints[randomIndex].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnSpecial(true, tempPos);
         npcX = tempPos.x;
@@ -102,9 +104,9 @@ public class GameManager : MonoBehaviour {
     //creates a dropoff NPC
     void createDropOff()
     {
-        randomIndex = random.Next(0, data.spawnPoints.Count);
+        randomIndex = random.Next(0, spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
-        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        Vector3 tempPos = spawnPoints[randomIndex].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnSpecial(false, tempPos);
         npcX = tempPos.x;
@@ -115,7 +117,7 @@ public class GameManager : MonoBehaviour {
     void createNPC(int index)
     {
         Transform n = Instantiate(NPCPrefab) as Transform;
-        Vector3 tempPos = data.spawnPoints[index].transform.position;
+        Vector3 tempPos = spawnPoints[index].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnNPC(tempPos);
         updateNPCCount(1);

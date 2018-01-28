@@ -18,7 +18,6 @@ public class GameData : ScriptableObject {
     public Stopwatch clock;
     public int pooHits;
     public bool letterCount;
-    public List<GameObject> spawnPoints;
 
     //Poop
     public void updatePoop(float size)
