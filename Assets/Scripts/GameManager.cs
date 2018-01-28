@@ -139,6 +139,12 @@ public class GameManager : MonoBehaviour {
         createPickUp();
     }
 
+    public void collidedPoop(GameObject person)
+    {
+        data.score -= 100;
+        Destroy(person);
+    }
+
     void despawnNPC()
     {
         NPCCount--;

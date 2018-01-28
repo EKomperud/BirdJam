@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour {
         {
             Transform p = Instantiate(poopPrefab) as Transform;
             Poop poop = p.GetComponent<Poop>();
-            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize);
+            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize, gm);
         }
     }
     #endregion
