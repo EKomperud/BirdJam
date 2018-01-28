@@ -43,7 +43,7 @@ public class NPC : MonoBehaviour {
         isSpecialNPC = true;
         t = GetComponentInChildren<Target>();
     }
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("NPC Collision");
         if(!isSpecialNPC)
@@ -55,7 +55,7 @@ public class NPC : MonoBehaviour {
                 posDir.x = random.Next(-1, 1);
                 posDir.z = random.Next(-1, 1);
             }
-            if(collision.gameObject.tag == "killzone")
+            if(other.gameObject.tag == "Killzone")
             {
                 gm.despawnNPC();
                 Destroy(this.gameObject);

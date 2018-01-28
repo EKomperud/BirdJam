@@ -8305,15 +8305,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 46.263733
+      value: 38.861
       objectReference: {fileID: 0}
     - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 4.226
       objectReference: {fileID: 0}
     - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.6330109
+      value: 3.63
       objectReference: {fileID: 0}
     - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8333,7 +8333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4530274231601196, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db4a60e4594c5714c88e6c8c8d445953, type: 2}
@@ -18778,6 +18778,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 634687987}
   m_Mesh: {fileID: 4300000, guid: 4b3be741686480c4bab9f11f8979705e, type: 3}
+--- !u!1 &635541239 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1438835588485640, guid: 3f4913bdf1dfcf042b94c7d4376e4498,
+    type: 2}
+  m_PrefabInternal: {fileID: 313758325}
 --- !u!1 &639205657
 GameObject:
   m_ObjectHideFlags: 0
@@ -21903,7 +21908,7 @@ GameObject:
   - component: {fileID: 737234872}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27306,7 +27311,7 @@ Transform:
   - {fileID: 2020949715}
   - {fileID: 1278112368}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &910759106
 GameObject:
@@ -34007,6 +34012,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160013119}
   m_Mesh: {fileID: 4300000, guid: 6bce6bd876f22284886dbc05651216a4, type: 3}
+--- !u!1 &1161769517 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1772906730292942, guid: fceb23390dfd0f24d95ddec616921fc1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1832598162}
 --- !u!1 &1165598544
 GameObject:
   m_ObjectHideFlags: 0
@@ -34384,7 +34394,7 @@ GameObject:
   - component: {fileID: 1188267500}
   m_Layer: 0
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35294,7 +35304,7 @@ GameObject:
   - component: {fileID: 1203987557}
   m_Layer: 0
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38900,17 +38910,17 @@ Prefab:
         type: 2}
       propertyPath: spawnPoints.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677107222}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 635541239}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[5]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1691000250}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[6]
@@ -38945,17 +38955,17 @@ Prefab:
         type: 2}
       propertyPath: spawnPoints.Array.data[12]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1703272306}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[13]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1863827230}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[14]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1161769517}
     - target: {fileID: 114415145678711374, guid: 4064ad3d335b66d449599499c6edfa8e,
         type: 2}
       propertyPath: spawnPoints.Array.data[15]
@@ -43045,7 +43055,7 @@ GameObject:
   - component: {fileID: 1465711290}
   m_Layer: 0
   m_Name: GameObject (4)
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49548,6 +49558,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672014190}
   m_Mesh: {fileID: 4300000, guid: 52b0db35abfbef94ca913b0ddff9d518, type: 3}
+--- !u!1 &1677107222 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1246964101029290, guid: 3f4913bdf1dfcf042b94c7d4376e4498,
+    type: 2}
+  m_PrefabInternal: {fileID: 313758325}
 --- !u!1 &1680896524
 GameObject:
   m_ObjectHideFlags: 0
@@ -49850,6 +49865,11 @@ Transform:
   m_Father: {fileID: 1252639412}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691000250 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1594371480705748, guid: 3f4913bdf1dfcf042b94c7d4376e4498,
+    type: 2}
+  m_PrefabInternal: {fileID: 313758325}
 --- !u!1 &1691691389
 GameObject:
   m_ObjectHideFlags: 0
@@ -50404,6 +50424,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1703272306 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1751381845895484, guid: fceb23390dfd0f24d95ddec616921fc1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1832598162}
 --- !u!1 &1703376472
 GameObject:
   m_ObjectHideFlags: 0
@@ -56053,6 +56078,11 @@ Transform:
   m_Father: {fileID: 2045941099}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1863827230 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1674480994339058, guid: fceb23390dfd0f24d95ddec616921fc1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1832598162}
 --- !u!1 &1864290129
 GameObject:
   m_ObjectHideFlags: 0
@@ -60853,7 +60883,7 @@ GameObject:
   - component: {fileID: 2009988842}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

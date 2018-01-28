@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         DoRotation();
-        //DoAcceleration();
         DoArrowUpdate();
 
         transform.position += (direction * currentSpeed * Time.deltaTime);
@@ -139,9 +138,6 @@ public class PlayerController : MonoBehaviour {
         float rX = transform.localRotation.eulerAngles.x + rotateFactorX;
         transform.localRotation = Quaternion.Euler(rX, rY, transform.localRotation.z);
 
-        //transform.Rotate(new Vector3(rotateFactorX, rotateFactorY, 0f));
-        //float aX = Mathf.Clamp(transform.localRotation.eulerAngles.x, -10f, 10f);
-
         float yAngle = transform.rotation.eulerAngles.y % 360;
         float ratio = Mathf.Tan(yAngle * Mathf.Deg2Rad);
         float X = Mathf.Abs(ratio), Z = 1;
@@ -163,11 +159,6 @@ public class PlayerController : MonoBehaviour {
 
         direction = newDir.normalized;
     }
-
-    //private void DoAcceleration()
-    //{
-
-    //}
 
     private void DoArrowUpdate()
     {
