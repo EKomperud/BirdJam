@@ -59,6 +59,7 @@ public class NPC : MonoBehaviour {
                 gm.despawnNPC();
                 Destroy(this.gameObject);
             }
+            //if (other.transform.parent.tag.Equals("Terain"))
         }
         
     }

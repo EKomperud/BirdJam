@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        data.score = 0;
+        data.pooHits = 0;
         minPop = 20;
         currentSpawn = 0;
         if (instance != null && instance != this)
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour {
             seconds = (int)data.clock.ElapsedMilliseconds / 1000;
             data.poopSize += (Time.deltaTime * player.GetSpeed()) / 2f;
         }
+        minPop+=2;
     }
 
     public void endGame()
