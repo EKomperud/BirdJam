@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245155edb8c82b4ab038eb10031fc77, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  poopSize: 4.920587
+  poopSize: 1.6216093
   minPoopSize: 1
   maxPoopSize: 6
-  score: -200
+  score: 100
   target: {fileID: 0}
   defaultCamDistance: 90
   maxCamDistance: 100

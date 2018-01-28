@@ -35,7 +35,6 @@ public class Poop : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Successful poop");
         NPC npc;
 
         AudioManager.instance.PlayPoopSplashSound(aSource,(int)size*(5/6) %5);
@@ -44,6 +43,7 @@ public class Poop : MonoBehaviour {
         {
             npc.PlaySwearSound();
             gm.collidedPoop(other.gameObject);
+            gm.collidePoopNPC(other.gameObject, this.size);
             Destroy(gameObject);
 
         }
