@@ -22,8 +22,6 @@ public class ScoresManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        allScores = new GameScores();
-        allScores.Start();
         //topMesgNames = new Text[5];
         //topMesgScores = new Text[5];
         //topPooperNames = new Text[5];
@@ -35,6 +33,7 @@ public class ScoresManager : MonoBehaviour {
         nameField.enabled = false;
 
         LoadPlayerScores();
+
         if (gData.pooHits > allScores.valuesHighscoresPooper[4] || gData.score > allScores.valuesHighscoresDelivery[4])
         //if (gData.pooHits > 5 || gData.score > 5)
         {
@@ -73,6 +72,8 @@ public class ScoresManager : MonoBehaviour {
 
     public void SubmitScore()
     {
+        SetPlayerName();
+
         if(gData.pooHits > allScores.valuesHighscoresPooper[4])
         {
             SubmitBadScore(gData.pooHits, playerName);
@@ -96,6 +97,7 @@ public class ScoresManager : MonoBehaviour {
     private void LoadPlayerScores()
     {
         allScores = new GameScores();
+        allScores.Start();
         LoadGoodPlayerScores();
         LoadBadPlayerScores();
     }
