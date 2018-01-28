@@ -18,16 +18,17 @@ public class NPC : MonoBehaviour {
         random = new System.Random();
         posDir = new Vector3(0, 0, 1);
         direction = new Vector3(0, 0, 1);
-        speed = .5f;
+        //speed = .5f;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (!isSpecialNPC)
         {
-            gameObjTrans.position += posDir * Time.deltaTime * speed;
-            direction.x = Mathf.Lerp(gameObjTrans.transform.position.x, posDir.x, Time.deltaTime*45f);
-            direction.z = Mathf.Lerp(gameObjTrans.transform.position.z, posDir.z, Time.deltaTime*45f);
+            transform.position += posDir * Time.deltaTime * speed;
+            direction.x = Mathf.Lerp(transform.position.x, posDir.x, Time.deltaTime*45f);
+            direction.z = Mathf.Lerp(transform.position.z, posDir.z, Time.deltaTime*45f);
             gameObject.transform.forward = direction;
         }
 	}
