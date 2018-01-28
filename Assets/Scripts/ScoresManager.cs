@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoresManager : MonoBehaviour {
 
@@ -260,5 +261,20 @@ public class ScoresManager : MonoBehaviour {
         PlayerPrefs.SetString("GoodScore4Name", allScores.namesHighscoresDelivery[3]);
         PlayerPrefs.SetInt("GoodScore5", allScores.valuesHighscoresDelivery[4]);
         PlayerPrefs.SetString("GoodScore5Name", allScores.namesHighscoresDelivery[4]);
+    }
+
+    //loads inputted level
+    public void LoadLevel(string level)
+    {
+        //Application.LoadLevel(level);
+        SceneManager.LoadScene(level);
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 }
