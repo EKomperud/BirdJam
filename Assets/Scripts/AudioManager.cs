@@ -79,9 +79,11 @@ public class AudioManager : MonoBehaviour {
 
     public IEnumerator PlayBGM()
     {
+        audioSource.loop = false;
         audioSource.clip = BGM.sounds[0];
         audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length);
+        yield return new WaitForSeconds(audioSource.clip.length );
+        audioSource.loop = true;
         audioSource.clip = BGM.sounds[1];
         audioSource.Play();
     }
