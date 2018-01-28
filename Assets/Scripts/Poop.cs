@@ -9,6 +9,7 @@ public class Poop : MonoBehaviour {
     private float size;
     private Vector3 direction;
     private GameManager gm;
+    private AudioSource aSource;
 
     private void FixedUpdate()
     {
@@ -27,17 +28,22 @@ public class Poop : MonoBehaviour {
         transform.localScale = transform.localScale *= size;
         this.size = size;
         this.gm = gm;
+        aSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Successful poop");
         NPC npc;
+
+        AudioManager.instance.PlayPoopSplashSound(aSource,(int)size*(5/6) %5);
         npc = other.gameObject.GetComponent<NPC>();
         if (npc != null)
         {
+            npc.PlaySwearSound();
             gm.collidedPoop(other.gameObject);
             Destroy(gameObject);
+
         }
     }
 }
