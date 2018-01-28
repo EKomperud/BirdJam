@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: b9e1e6a28c6768b4fb4ad1fac2ee8111
+timeCreated: 1517166608
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Head
+    100002: Head_END
+    100004: HIPS
+    100006: Jaw
+    100008: Jaw_END
+    100010: LEFT_Arm_MAIN
+    100012: LEFT_Arm_MAIN_ROLL_BONE
+    100014: LEFT_Clavicle
+    100016: LEFT_Foot_MAIN
+    100018: LEFT_Forearm_MAIN
+    100020: LEFT_Forearm_MAIN_ROLL_BONE
+    100022: LEFT_Hand_MAIN
+    100024: LEFT_Index_Finger_1
+    100026: LEFT_Index_Finger_2
+    100028: LEFT_Index_Finger_3
+    100030: LEFT_Index_Finger_END
+    100032: LEFT_Leg_MAIN
+    100034: LEFT_Leg_MAIN_ROLL_BONE
+    100036: LEFT_Middle_Finger_1
+    100038: LEFT_Middle_Finger_2
+    100040: LEFT_Middle_Finger_3
+    100042: LEFT_Middle_Finger_END
+    100044: LEFT_Pinky_Finger_1
+    100046: LEFT_Pinky_Finger_2
+    100048: LEFT_Pinky_Finger_3
+    100050: LEFT_Pinky_Finger_END
+    100052: LEFT_Ring_Finger_1
+    100054: LEFT_Ring_Finger_2
+    100056: LEFT_Ring_Finger_3
+    100058: LEFT_Ring_Finger_END
+    100060: LEFT_Shin_MAIN
+    100062: LEFT_Shin_MAIN_ROLL_BONE
+    100064: LEFT_Toes_MAIN
+    100066: LEFT_Toes_MAIN_END
+    100068: //RootNode
+    100070: Man_Mesh
+    100072: Neck_1
+    100074: Neck_2
+    100076: RIGHT_Arm_MAIN
+    100078: RIGHT_Arm_MAIN_ROLL_BONE
+    100080: RIGHT_Clavicle
+    100082: RIGHT_Foot_MAIN
+    100084: RIGHT_Forearm_MAIN
+    100086: RIGHT_Forearm_MAIN_ROLL_BONE
+    100088: RIGHT_Hand_MAIN
+    100090: RIGHT_Index_Finger_1
+    100092: RIGHT_Index_Finger_2
+    100094: RIGHT_Index_Finger_3
+    100096: RIGHT_Index_Finger_END
+    100098: RIGHT_Leg_MAIN
+    100100: RIGHT_Leg_MAIN_ROLL_BONE
+    100102: RIGHT_Middle_Finger_1
+    100104: RIGHT_Middle_Finger_2
+    100106: RIGHT_Middle_Finger_3
+    100108: RIGHT_Middle_Finger_END
+    100110: RIGHT_Pinky_Finger_1
+    100112: RIGHT_Pinky_Finger_2
+    100114: RIGHT_Pinky_Finger_3
+    100116: RIGHT_Pinky_Finger_END
+    100118: RIGHT_Ring_Finger_1
+    100120: RIGHT_Ring_Finger_2
+    100122: RIGHT_Ring_Finger_3
+    100124: RIGHT_Ring_Finger_END
+    100126: RIGHT_Shin_MAIN
+    100128: RIGHT_Shin_MAIN_ROLL_BONE
+    100130: RIGHT_Toes_MAIN
+    100132: RIGHT_Toes_MAIN_END
+    100134: RootBone
+    100136: Spine_1
+    100138: Spine_2
+    100140: Spine_3
+    100142: Spine_4
+    100144: Spine_5
+    400000: Head
+    400002: Head_END
+    400004: HIPS
+    400006: Jaw
+    400008: Jaw_END
+    400010: LEFT_Arm_MAIN
+    400012: LEFT_Arm_MAIN_ROLL_BONE
+    400014: LEFT_Clavicle
+    400016: LEFT_Foot_MAIN
+    400018: LEFT_Forearm_MAIN
+    400020: LEFT_Forearm_MAIN_ROLL_BONE
+    400022: LEFT_Hand_MAIN
+    400024: LEFT_Index_Finger_1
+    400026: LEFT_Index_Finger_2
+    400028: LEFT_Index_Finger_3
+    400030: LEFT_Index_Finger_END
+    400032: LEFT_Leg_MAIN
+    400034: LEFT_Leg_MAIN_ROLL_BONE
+    400036: LEFT_Middle_Finger_1
+    400038: LEFT_Middle_Finger_2
+    400040: LEFT_Middle_Finger_3
+    400042: LEFT_Middle_Finger_END
+    400044: LEFT_Pinky_Finger_1
+    400046: LEFT_Pinky_Finger_2
+    400048: LEFT_Pinky_Finger_3
+    400050: LEFT_Pinky_Finger_END
+    400052: LEFT_Ring_Finger_1
+    400054: LEFT_Ring_Finger_2
+    400056: LEFT_Ring_Finger_3
+    400058: LEFT_Ring_Finger_END
+    400060: LEFT_Shin_MAIN
+    400062: LEFT_Shin_MAIN_ROLL_BONE
+    400064: LEFT_Toes_MAIN
+    400066: LEFT_Toes_MAIN_END
+    400068: //RootNode
+    400070: Man_Mesh
+    400072: Neck_1
+    400074: Neck_2
+    400076: RIGHT_Arm_MAIN
+    400078: RIGHT_Arm_MAIN_ROLL_BONE
+    400080: RIGHT_Clavicle
+    400082: RIGHT_Foot_MAIN
+    400084: RIGHT_Forearm_MAIN
+    400086: RIGHT_Forearm_MAIN_ROLL_BONE
+    400088: RIGHT_Hand_MAIN
+    400090: RIGHT_Index_Finger_1
+    400092: RIGHT_Index_Finger_2
+    400094: RIGHT_Index_Finger_3
+    400096: RIGHT_Index_Finger_END
+    400098: RIGHT_Leg_MAIN
+    400100: RIGHT_Leg_MAIN_ROLL_BONE
+    400102: RIGHT_Middle_Finger_1
+    400104: RIGHT_Middle_Finger_2
+    400106: RIGHT_Middle_Finger_3
+    400108: RIGHT_Middle_Finger_END
+    400110: RIGHT_Pinky_Finger_1
+    400112: RIGHT_Pinky_Finger_2
+    400114: RIGHT_Pinky_Finger_3
+    400116: RIGHT_Pinky_Finger_END
+    400118: RIGHT_Ring_Finger_1
+    400120: RIGHT_Ring_Finger_2
+    400122: RIGHT_Ring_Finger_3
+    400124: RIGHT_Ring_Finger_END
+    400126: RIGHT_Shin_MAIN
+    400128: RIGHT_Shin_MAIN_ROLL_BONE
+    400130: RIGHT_Toes_MAIN
+    400132: RIGHT_Toes_MAIN_END
+    400134: RootBone
+    400136: Spine_1
+    400138: Spine_2
+    400140: Spine_3
+    400142: Spine_4
+    400144: Spine_5
+    4300000: Man_Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Man_Mesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Human_M_Black
+    second: {fileID: 2100000, guid: 813dbb28ddb0f0f46af4861168ea76a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Human_M_Pants
+    second: {fileID: 2100000, guid: 95877a57f35913949b3615507e689c01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Human_M_Skin
+    second: {fileID: 2100000, guid: 55d9a2f3103c1df47aa4a6ad6f0993a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Human_Male_Shirt
+    second: {fileID: 2100000, guid: 83be6fba909da3e45b70385740a1e640, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 35f968b5801c52647a333794bf5630d7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
