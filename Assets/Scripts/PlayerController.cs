@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 direction;
     private float rotateFactorX;
     private float rotateFactorZ;
+    private AudioSource aSource;
     #endregion
 
     #region MonoBehaviour
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour {
         direction = new Vector3(0, 0, 1);
         currentSpeed = defaultSpeed;
         bxc = GetComponent<BoxCollider>();
-
+        aSource = GetComponent<AudioSource>();
         GameManager.TryGetInstance(out gm);
 	}
 
@@ -59,6 +60,21 @@ public class PlayerController : MonoBehaviour {
             Transform p = Instantiate(poopPrefab) as Transform;
             Poop poop = p.GetComponent<Poop>();
             poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize);
+           switch((int)poopSize)
+            {
+                case 1:
+                case 2:
+                    AudioManager.instance.PlayPoopLaunchSound(aSource, 0);
+                    break;
+                case 3:
+                case 4:
+                    AudioManager.instance.PlayPoopLaunchSound(aSource, 1);
+                    break;
+                case 5:
+                case 6:
+                    AudioManager.instance.PlayPoopLaunchSound(aSource, 2);
+                    break;
+            }
         }
     }
     #endregion
