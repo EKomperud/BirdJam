@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour {
     public GameObject player;
     private float npcX;
     private float npcZ;
+    System.Random random;
+    int randomIndex;
     int seconds;
+    [SerializeField] private Transform NPCPrefab;
 
     // Use this for initialization
     void Start () {
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour {
         //create first pickup in visible area (probably same area each time)
         updateNPCCount(1);
         data.clock.Start();
+        random = new System.Random();
     }
 	
 	// Update is called once per frame
@@ -74,24 +78,36 @@ public class GameManager : MonoBehaviour {
     //creates a pickup NPC
     void createPickUp()
     {
-        //temp = specialNormies(bool pickup);
-        //npcX = temp.transform.position.x;
-        //npcZ = temp.transform.position.z;
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(true, tempPos);
+        npcX = tempPos.x;
+        npcZ = tempPos.y;
     }
 
     //creates a dropoff NPC
     void createDropOff()
     {
-        //temp = specialNormies(bool pickup);
-        //npcX = temp.transform.position.x;
-        //npcZ = temp.transform.position.z;
-        //updates npc count;
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(false, tempPos);
+        npcX = tempPos.x;
+        npcZ = tempPos.y;
     }
 
     //creates normies
     void createNPC(int amount)
     {
-        //call NPC code to spawn npcs
+        randomIndex = random.Next(0, data.spawnPoints.Count);
+        Transform n = Instantiate(NPCPrefab) as Transform;
+        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
+        //NPC npc = new NPC(tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnNPC(tempPos);
         updateNPCCount(amount);
     }
 
@@ -104,22 +120,22 @@ public class GameManager : MonoBehaviour {
 
 
     //handles pickup collision
-    void collidedPickUp()
+    void collidedPickUp(GameObject person)
     {
         data.score += 50;
-        //remove pickup npc
+        Destroy(person);
         data.letterCount = true;
-        //create a drop off npc
+        createDropOff();
 
     }
 
     //handles dropoff collision
-    void collidedDropOff()
+    void collidedDropOff(GameObject person)
     {
         data.score += 50;
-        //remove dropoff npc
+        Destroy(person);
         data.letterCount = false;
-        //create a pickup npc
+        createPickUp();
     }
 
     void despawnNPC()
@@ -131,5 +147,19 @@ public class GameManager : MonoBehaviour {
     {
         data.score += -droppedPoo * 10;
         data.pooHits++;
+    }
+
+    void collidePoopSpecial(int droppedPoo)
+    {
+        collidePoopNPC(droppedPoo);
+        //despawn special npc
+        if(data.letterCount)
+        {
+            createDropOff();
+        }
+        else
+        {
+            createPickUp();
+        }
     }
 }
