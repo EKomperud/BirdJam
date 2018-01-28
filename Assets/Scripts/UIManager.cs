@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
+        //gData.createTimer();
+        //gData.startTimer();
         //setting alpha channel to 0
         SetTranspernecy(0);
         //gData.createTimer();
@@ -111,6 +113,7 @@ public class UIManager : MonoBehaviour {
     {
         //poopText.text = gData.poopSize.ToString() ;
         //float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
+        //float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
         //poopText.text = ((int)(clock.ElapsedMilliseconds / 1000)).ToString();
         SetTranspernecy((float)gData.poopSize/6.0f);
         poopSlider.value = gData.poopSize;//((int)(clock.ElapsedMilliseconds / 100));
@@ -118,7 +121,6 @@ public class UIManager : MonoBehaviour {
         SetOrbColor((float)gData.pooHits * 0.1f, (float)gData.pooHits * 0.1f);
         //SetOrbColor(clocknumtest,clocknumtest);
     }
-
 
     public void SetOrbColor(float green,float blue)
     {

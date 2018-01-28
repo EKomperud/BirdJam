@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0d53c2ab545bf9047b751bbd7b30df75
-timeCreated: 1517080756
+guid: 7bdcef3456646a542af9de9095e62216
+timeCreated: 1517079726
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,17 +16,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sidewalk
-    second: {fileID: 2100000, guid: 5e65872e0ec1117488afcb359fb86c54, type: 2}
+    second: {fileID: 2100000, guid: 43aeccb977881394f9d75fde606d51ca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Street_
-    second: {fileID: 2100000, guid: 2b47bcb5488564e40ad0a73226833523, type: 2}
+    second: {fileID: 2100000, guid: 90fc7cda33978ca418cb6e9136fc0331, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Street_Lines
-    second: {fileID: 2100000, guid: 8baa94fa2a272c443830780439707678, type: 2}
+    second: {fileID: 2100000, guid: 1558467bea2fe424a9ae73f69cd702f1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 48e5703624112c34bae1ac49484f1682
-timeCreated: 1517080756
+guid: f5490605cc7214349aa6e483201f3ee0
+timeCreated: 1517082759
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -139,22 +139,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black_2
-    second: {fileID: 2100000, guid: af4671f94343fda46a67df097be56c4b, type: 2}
+    second: {fileID: 2100000, guid: 260daf6e788f88e438aefc83774ce585, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dumpster_green
-    second: {fileID: 2100000, guid: b971374a3ceca1b40bfa196d83d3d878, type: 2}
+    second: {fileID: 2100000, guid: d6d0482de58c5bc42b1bb0d502a180a7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
+    second: {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phong1
-    second: {fileID: 2100000, guid: 4bab41381cf64444ea13af6a134d170e, type: 2}
+    second: {fileID: 2100000, guid: ef81dcd56c702c44aa536d76efc5379e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
