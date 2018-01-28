@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3d9341314d5d8c042b87ed8e078e3d8c
-timeCreated: 1517080756
+guid: 02135e51aff8ab44c96a312c55421bc4
+timeCreated: 1517079725
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,22 +16,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sidewalk
-    second: {fileID: 2100000, guid: 5e65872e0ec1117488afcb359fb86c54, type: 2}
+    second: {fileID: 2100000, guid: 43aeccb977881394f9d75fde606d51ca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Street_
-    second: {fileID: 2100000, guid: 2b47bcb5488564e40ad0a73226833523, type: 2}
+    second: {fileID: 2100000, guid: 90fc7cda33978ca418cb6e9136fc0331, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Street_Lines
-    second: {fileID: 2100000, guid: 8baa94fa2a272c443830780439707678, type: 2}
+    second: {fileID: 2100000, guid: 1558467bea2fe424a9ae73f69cd702f1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
+    second: {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -13,24 +13,27 @@ public class UIManager : MonoBehaviour {
     //public Text poopText;
     public Image poopAlertPanel;
     //temp until fused with game manager
-    public Stopwatch clock;
+    //public Stopwatch clock;
     public Slider poopSlider;
     public Slider timeSlider;
     public Image orbCounter;
+    public int totalTime;
     // Use this for initialization
     void Start()
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
+        //gData.createTimer();
+        //gData.startTimer();
         //setting alpha channel to 0
         SetTranspernecy(0);
         //gData.createTimer();
         //gData.startTimer();
-        clock = new Stopwatch();
-        clock.Start();
-        poopSlider.value = 0;
-        timeSlider.value = 100;
+        //clock = new Stopwatch();
+        //clock.Start();
+        poopSlider.value = gData.poopSize;
+        timeSlider.value = totalTime;
 
         //orbCounter.color
     }
@@ -45,20 +48,20 @@ public class UIManager : MonoBehaviour {
             if (Mathf.Equals(Time.timeScale, 1f))
             {
                 Time.timeScale = 0;
-                clock.Stop();
+                gData.clock.Stop();
                 showPaused();
             }
             else if (Time.timeScale == 0)
             {
                 //Debug.Log("high");
                 Time.timeScale = 1;
-                clock.Start();
+                gData.clock.Start();
                 hidePaused();
             }
         }
     }
 
-    //controls the pausing of the scene
+ /*   //controls the pausing of the scene
     public void pauseControl()
     {
         if (Mathf.Equals(Time.timeScale, 1f))
@@ -71,7 +74,7 @@ public class UIManager : MonoBehaviour {
             Time.timeScale = 1;
             hidePaused();
         }
-    }
+    }*/
 
     //shows objects with ShowOnPause tag
     public void showPaused()
@@ -109,14 +112,15 @@ public class UIManager : MonoBehaviour {
     public void UpdateGUI()
     {
         //poopText.text = gData.poopSize.ToString() ;
-        float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
+        //float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
+        //float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
         //poopText.text = ((int)(clock.ElapsedMilliseconds / 1000)).ToString();
-        SetTranspernecy(clock.ElapsedMilliseconds / 10000.0f);
-        poopSlider.value = ((int)(clock.ElapsedMilliseconds / 100));
-        timeSlider.value = 100 - (int)(clock.ElapsedMilliseconds / 100);
-        SetOrbColor(clocknumtest,clocknumtest);
+        SetTranspernecy((float)gData.poopSize/6.0f);
+        poopSlider.value = gData.poopSize;//((int)(clock.ElapsedMilliseconds / 100));
+        timeSlider.value = totalTime - (int)(gData.clock.ElapsedMilliseconds / 1000);
+        SetOrbColor((float)gData.pooHits * 0.1f, (float)gData.pooHits * 0.1f);
+        //SetOrbColor(clocknumtest,clocknumtest);
     }
-
 
     public void SetOrbColor(float green,float blue)
     {

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7cc8a67a635c8db45a307d2c8e6d62fc
-timeCreated: 1517080756
+guid: 9fdedc1fbc74b6a4c9e50f6e5cbac08b
+timeCreated: 1517082759
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,17 +16,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Black_2
-    second: {fileID: 2100000, guid: af4671f94343fda46a67df097be56c4b, type: 2}
+    second: {fileID: 2100000, guid: 260daf6e788f88e438aefc83774ce585, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blue
-    second: {fileID: 2100000, guid: 529e012c3ae415b4ca61903dabe86660, type: 2}
+    second: {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phong1
-    second: {fileID: 2100000, guid: 4bab41381cf64444ea13af6a134d170e, type: 2}
+    second: {fileID: 2100000, guid: ef81dcd56c702c44aa536d76efc5379e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

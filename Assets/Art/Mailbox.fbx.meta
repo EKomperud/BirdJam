@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 52b0db35abfbef94ca913b0ddff9d518
-timeCreated: 1517084950
+guid: 93eabfaf9335e8e4aa87d7c447a09b59
+timeCreated: 1517082759
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,12 +16,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert2
-    second: {fileID: 2100000, guid: 2632bdaeee9db7747a358d17c3957bd2, type: 2}
+    second: {fileID: 2100000, guid: ecded79075a53c14bbcff6ebb404e426, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: typeBlinn1
-    second: {fileID: 2100000, guid: 47ee2248d0d888b42a6dbe77c3bba1b5, type: 2}
+    second: {fileID: 2100000, guid: 7c6a6bc8255a1dc46b886b20db9f0c62, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

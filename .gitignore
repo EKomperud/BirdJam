@@ -43,3 +43,4 @@ sysinfo.txt
 #Other
 *.json
 *.dwlt
+*.meta

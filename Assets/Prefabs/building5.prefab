@@ -201,7 +201,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
+  - {fileID: 2100000, guid: 35f968b5801c52647a333794bf5630d7, type: 2}
   - {fileID: 2100000, guid: e72d8b7847b6a83438de21a0c0cb2db6, type: 2}
   - {fileID: 2100000, guid: c9bb4072039a91a448140773e0a50690, type: 2}
   - {fileID: 2100000, guid: 9a238d14bba085042964cc8bd154641b, type: 2}
