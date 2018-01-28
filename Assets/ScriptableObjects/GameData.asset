@@ -11,3 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245155edb8c82b4ab038eb10031fc77, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
+  poopSize: 1
+  score: 0
+  angle: -14.443992
+  pooHits: 0
+  letterCount: 0
+  spawnPoints:
+  - {fileID: 100000, guid: 009106d67b461fc4eb7a5b378db4c09d, type: 3}

@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         data.clock = new Stopwatch();
-        data.spawnPoints = new List<GameObject>();
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
@@ -82,7 +81,8 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(true, tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(true, tempPos);
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -93,7 +93,8 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(false, tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnSpecial(false, tempPos);
         npcX = tempPos.x;
         npcZ = tempPos.y;
     }
@@ -104,7 +105,9 @@ public class GameManager : MonoBehaviour {
         randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        NPC npc = new NPC(tempPos);
+        //NPC npc = new NPC(tempPos);
+        NPC npc = n.GetComponent<NPC>();
+        npc.spawnNPC(tempPos);
         updateNPCCount(amount);
     }
 
