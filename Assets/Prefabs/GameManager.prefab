@@ -55,7 +55,11 @@ MonoBehaviour:
   player: {fileID: 0}
   cam: {fileID: 0}
   target: {fileID: 0}
+  dirLight: {fileID: 0}
   NPCPrefab: {fileID: 4788155554199536, guid: 6c021f73b687a8b43a18f7025493da3d, type: 2}
+  NPC_DropOff: {fileID: 4405168276357248, guid: b2be5defc076bde41813b3278439164c,
+    type: 2}
+  NPC_PickUp: {fileID: 4392253582144182, guid: 547da03c0cea614478f81bb22247760e, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

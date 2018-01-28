@@ -29,17 +29,20 @@ public class ScoresManager : MonoBehaviour {
         mesgLeaderboards.SetActive(false);
         pooperLeaderboards.SetActive(false);
 
+        submitButton.enabled = false;
+        nameField.enabled = false;
+
         LoadPlayerScores();
+
         if (gData.pooHits > allScores.valuesHighscoresPooper[4] || gData.score > allScores.valuesHighscoresDelivery[4])
+        //if (gData.pooHits > 5 || gData.score > 5)
         {
-            submitButton.enabled = true;
+                submitButton.enabled = true;
             nameField.enabled = true;
             nameField.text = "Your Name";
         }
         else
         {
-            submitButton.enabled = false;
-            nameField.enabled = false;
             mesgLeaderboards.SetActive(true);
             pooperLeaderboards.SetActive(true);
             SetText(topMesgNames.Length);
@@ -69,6 +72,8 @@ public class ScoresManager : MonoBehaviour {
 
     public void SubmitScore()
     {
+        SetPlayerName();
+
         if(gData.pooHits > allScores.valuesHighscoresPooper[4])
         {
             SubmitBadScore(gData.pooHits, playerName);
@@ -92,6 +97,7 @@ public class ScoresManager : MonoBehaviour {
     private void LoadPlayerScores()
     {
         allScores = new GameScores();
+        allScores.Start();
         LoadGoodPlayerScores();
         LoadBadPlayerScores();
     }
