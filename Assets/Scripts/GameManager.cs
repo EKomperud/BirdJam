@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour {
         data.clock = new Stopwatch();
         data.clock.Start();
 
-        data.spawnPoints = new List<GameObject>();
         updateNPCCount(1);
         random = new System.Random();
 
@@ -41,6 +40,8 @@ public class GameManager : MonoBehaviour {
         //load map
         //create npcs/update npc count
         //create first pickup in visible area (probably same area each time)
+        createNPC(1);
+        createPickUp();
     }
 
 	
@@ -145,7 +146,7 @@ public class GameManager : MonoBehaviour {
         Destroy(person);
     }
 
-    void despawnNPC()
+    public void despawnNPC()
     {
         NPCCount--;
     }

@@ -35,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158394301326922}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.9, y: 0.245, z: 59.599}
-  m_LocalScale: {x: 0.17768696, y: 0.17768694, z: 0.17768694}
+  m_LocalRotation: {x: -0.54278934, y: 0.27410263, z: 0.37097603, w: 0.70187205}
+  m_LocalPosition: {x: -8.788628, y: 0.7522172, z: -5.6152267}
+  m_LocalScale: {x: 0.17768696, y: 0.17768702, z: 0.17768697}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -74.864006, y: 356.057, z: -301.264}
 --- !u!23 &23330812213184588
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -56,14 +56,14 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 44ec1ea3319b691429bcb30f1b203afe, type: 2}
-  - {fileID: 2100000, guid: 9f32c35d4e1532b49a937d325d2b00cf, type: 2}
-  - {fileID: 2100000, guid: c3dfb8621f72b5548b22621c9eb8c37d, type: 2}
-  - {fileID: 2100000, guid: 9fa75128930842a428f14a5b50027837, type: 2}
-  - {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
-  - {fileID: 2100000, guid: 529e012c3ae415b4ca61903dabe86660, type: 2}
-  - {fileID: 2100000, guid: 9d5ec34877fbbea43bf8d5a6cad9997c, type: 2}
-  - {fileID: 2100000, guid: 9021ade11b461ea45b95541cb70aa1db, type: 2}
+  - {fileID: 2100000, guid: ee8f2506458814a45b09551ec0c87406, type: 2}
+  - {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
+  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
+  - {fileID: 2100000, guid: d76f8037b2b251d42866fd23b6354516, type: 2}
+  - {fileID: 2100000, guid: 93bc5617f690c6644943a1fb94802106, type: 2}
+  - {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
+  - {fileID: 2100000, guid: ec4f7bab8e0095b41a7fa7df24ca5156, type: 2}
+  - {fileID: 2100000, guid: 0919b3897df406243a5933d17feefc31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,7 +89,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158394301326922}
-  m_Mesh: {fileID: 4300000, guid: cf73ebea51b94ef4bb6849527c333d7b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ec59207052174a74d8e5f79676aaf40a, type: 3}
 --- !u!65 &65683884314044218
 BoxCollider:
   m_ObjectHideFlags: 1
