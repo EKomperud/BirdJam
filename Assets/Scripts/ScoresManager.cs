@@ -12,6 +12,8 @@ public class ScoresManager : MonoBehaviour {
     public InputField nameField;
     public Button submitButton;
     public GameData gData;
+    public GameObject mesgLeaderboards;
+    public GameObject pooperLeaderboards;
     public Text[] topMesgNames;
     public Text[] topMesgScores;
     public Text[] topPooperNames;
@@ -24,6 +26,8 @@ public class ScoresManager : MonoBehaviour {
         //topMesgScores = new Text[5];
         //topPooperNames = new Text[5];
         //topPooperScores = new Text[5];
+        mesgLeaderboards.SetActive(false);
+        pooperLeaderboards.SetActive(false);
 
         LoadPlayerScores();
         if (gData.pooHits > allScores.valuesHighscoresPooper[4] || gData.score > allScores.valuesHighscoresDelivery[4])
@@ -36,9 +40,12 @@ public class ScoresManager : MonoBehaviour {
         {
             submitButton.enabled = false;
             nameField.enabled = false;
-        }
+            mesgLeaderboards.SetActive(true);
+            pooperLeaderboards.SetActive(true);
+            SetText(topMesgNames.Length);
 
-        SetText(topMesgNames.Length);
+        }
+        
 	}
 	
 
@@ -70,8 +77,9 @@ public class ScoresManager : MonoBehaviour {
         {
             SubmitGoodScore(gData.score,playerName);
         }
-
-
+        mesgLeaderboards.SetActive(true);
+        pooperLeaderboards.SetActive(true);
+        SetText(topMesgNames.Length);
 
 
     }
@@ -297,6 +305,7 @@ public class ScoresManager : MonoBehaviour {
 
     public void QuitGame()
     {
+        SavePlayerScores();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
