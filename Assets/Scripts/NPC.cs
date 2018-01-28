@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour {
     public GameData data;
+    public GameManager gm;
     public float speed;
     Vector3 direction;
     Vector3 posDir;
@@ -13,6 +14,7 @@ public class NPC : MonoBehaviour {
     System.Random random;
     // Use this for initialization
     void Start () {
+        GameManager.TryGetInstance(out gm);
         random = new System.Random();
         posDir = new Vector3(0, 0, 1);
         direction = new Vector3(0, 0, 1);
@@ -52,6 +54,11 @@ public class NPC : MonoBehaviour {
             {
                 posDir.x = random.Next(-1, 1);
                 posDir.z = random.Next(-1, 1);
+            }
+            if(collision.gameObject.tag == "killzone")
+            {
+                gm.despawnNPC();
+                Destroy(this.gameObject);
             }
         }
         
