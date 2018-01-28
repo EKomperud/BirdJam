@@ -45,7 +45,6 @@ public class NPC : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("NPC Collision");
         if(!isSpecialNPC)
         {
             posDir.x = random.Next(-1, 1);

@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 49795143}
   m_Layer: 0
   m_Name: BLOCK2 (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5009,7 +5009,7 @@ GameObject:
   - component: {fileID: 185519044}
   m_Layer: 0
   m_Name: BLOCK2 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21276,7 +21276,7 @@ GameObject:
   - component: {fileID: 910568148}
   m_Layer: 0
   m_Name: BLOCK2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48830,7 +48830,7 @@ GameObject:
   - component: {fileID: 2090895683}
   m_Layer: 0
   m_Name: Traffic Lights
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

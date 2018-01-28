@@ -37,11 +37,13 @@ public class PlayerController : MonoBehaviour {
     private float rotateFactorY;
     private float rotateFactorX;
     private AudioSource aSource;
+    private bool alive;
     #endregion
 
     #region MonoBehaviour
     void Start ()
     {
+        alive = true;
         direction = new Vector3(0, 0, 1);
         currentSpeed = defaultSpeed;
         bxc = GetComponent<BoxCollider>();
@@ -51,18 +53,26 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            AttemptPoop();
+        if (alive)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                AttemptPoop();
 
-        if (data.poopSize >= data.maxPoopSize)
-            AttemptPoop();
+            if (data.poopSize >= data.maxPoopSize)
+                AttemptPoop();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Terrain"))
+        Debug.Log("Player collision");
+        if (other.transform.parent.tag.Equals("Terrain"))
         {
-
+            ParticleSystem p = Instantiate(poof) as ParticleSystem;
+            p.transform.position = transform.position;
+            p.Play();
+            alive = false;
+            StartCoroutine("Death");
         }
     }
 
@@ -91,15 +101,31 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
+
+    private IEnumerator Death()
+    {
+        transform.GetChild(1).gameObject.SetActive(false);
+        float delay = 2f;
+        float timer = 0f;
+        while (timer <= delay)
+        {
+            timer += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        gm.endGame();
+    }
     #endregion
 
     #region Movement Updates
     private void FixedUpdate()
     {
-        DoRotation();
-        DoArrowUpdate();
+        if (alive)
+        {
+            DoRotation();
+            DoArrowUpdate();
 
-        transform.position += (direction * currentSpeed * Time.deltaTime);
+            transform.position += (direction * currentSpeed * Time.deltaTime);
+        }
     }
 
     private void DoRotation()
