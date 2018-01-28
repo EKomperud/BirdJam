@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33284308560928448}
   - component: {fileID: 23765258544518972}
   - component: {fileID: 114960976482577008}
-  - component: {fileID: 54641763289476538}
-  - component: {fileID: 136313021372112496}
+  - component: {fileID: 54337902625664934}
+  - component: {fileID: 136805666369267642}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212543443348938}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.598595, y: 8.918806, z: -199.85358}
+  m_LocalPosition: {x: -1.249218, y: 0.08, z: -1.4454787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c9bb4072039a91a448140773e0a50690, type: 2}
+  - {fileID: 2100000, guid: 34982d3f8aafa834a8411bf1d8397c7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212543443348938}
   m_Mesh: {fileID: 4300000, guid: 0c62def18b4eed246859a8a1bfd27646, type: 3}
---- !u!54 &54641763289476538
+--- !u!54 &54337902625664934
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,16 +114,16 @@ MonoBehaviour:
   data: {fileID: 0}
   gm: {fileID: 0}
   speed: 0
---- !u!136 &136313021372112496
+--- !u!136 &136805666369267642
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212543443348938}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.12
+  m_Radius: 0.06
   m_Height: 0.46346894
   m_Direction: 1
   m_Center: {x: -0.000000022351742, y: 0.23164178, z: -0.009165615}

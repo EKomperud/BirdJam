@@ -11,16 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245155edb8c82b4ab038eb10031fc77, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-
-  poopSize: 1
+  poopSize: 3.1266215
   minPoopSize: 1
   maxPoopSize: 6
+  score: 0
+  target: {fileID: 0}
   defaultCamDistance: 60
   maxCamDistance: 70
   camAcceleration: 0.5
-  score: 0
   angle: -14.443992
   pooHits: 0
   letterCount: 0
   spawnPoints:
-  - {fileID: 100000, guid: 009106d67b461fc4eb7a5b378db4c09d, type: 3}
+  - {fileID: 1307599600339050, guid: 880b707d96300ce49b0abe6ad98f39c4, type: 2}
+  - {fileID: 1693728971733656, guid: da2810396eb3c6d43b858ae1c91985bc, type: 2}
+  - {fileID: 1345241878336848, guid: b6fb30149e742ee408446015433ee4f6, type: 2}
