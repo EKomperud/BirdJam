@@ -12,15 +12,19 @@ public class NPC : MonoBehaviour {
     Transform gameObjTrans;
     Target t;
     System.Random random;
+    AudioSource aSource;
     // Use this for initialization
     void Start () {
         GameManager.TryGetInstance(out gm);
         random = new System.Random();
         posDir = new Vector3(0, 0, 1);
         //speed = .5f;
+        aSource = GetComponent<AudioSource>();
 
     }
-	
+    public void PlaySwearSound(){
+        AudioManager.instance.PlaySwearSound(aSource);
+    }
 	// Update is called once per frame
 	void Update () {
         if (!isSpecialNPC)

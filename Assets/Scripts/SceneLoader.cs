@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour {
 
     public string levelName;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public float timer = 0f;
 	
-	// Update is called once per frame
 	void Update () {
-        
+        if (timer <= 2f)
+            timer += Time.deltaTime;
+        else if (Input.anyKey)
+            SceneManager.LoadScene("TempMainMenu");
     }
 }

@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Player collision");
         string tagThis = go.tag;
         string tagParent = go.transform.parent.tag;
-        if (tagThis.Equals("Terrain") || tagParent.Equals("Terrain"))
+        if (tagThis.Equals("Terrain") || tagThis.Equals("Killzone") || tagParent.Equals("Terrain"))
         {
             ParticleSystem p = Instantiate(poof) as ParticleSystem;
             p.transform.position = transform.position;
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour {
         {
             Transform p = Instantiate(poopPrefab) as Transform;
             Poop poop = p.GetComponent<Poop>();
-            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize, gm);
+            poop.SpawnPoop(new Vector3(transform.position.x, transform.position.y, transform.position.z), direction, poopSize, currentSpeed, gm);
            switch((int)poopSize)
             {
                 case 1:

@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour {
         //audioSource.clip = ambience.sounds[0];
         //audioSource.clip = poopSound.sounds[3];
         //audioSource.Play();
-        if (SceneManager.GetActiveScene().name == "GameScene")
+        if (SceneManager.GetActiveScene().name == "Build Scene")
         {
             StartCoroutine(PlayBGM());
         }
