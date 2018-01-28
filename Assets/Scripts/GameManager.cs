@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        data.score = 0;
+        data.pooHits = 0;
         minPop = 20;
         currentSpawn = 0;
         if (instance != null && instance != this)

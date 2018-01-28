@@ -194,9 +194,10 @@ public class PlayerController : MonoBehaviour {
             newDir = new Vector3();
 
         if (newDir == Vector3.zero)
-            newDir = new Vector3(0f, 0f, 1f);
+            newDir = new Vector3(0f, Y, 1f);
 
         direction = newDir.normalized;
+        direction = new Vector3(direction.x, Y, direction.z);
     }
 
     private void DoArrowUpdate()
