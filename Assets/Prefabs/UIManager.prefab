@@ -501,6 +501,7 @@ MonoBehaviour:
   poopSlider: {fileID: 114339188806271536}
   timeSlider: {fileID: 114701027661610044}
   orbCounter: {fileID: 114736622159290774}
+  totalTime: 0
 --- !u!114 &114128362011228992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -568,7 +569,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 6
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1021,7 +1022,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 60
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
