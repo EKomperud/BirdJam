@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement/Rotation Settings")]
     [SerializeField] private float defaultSpeed;
     [SerializeField] private float maxSpeed;
+    [SerializeField] private float minSpeed;
     [SerializeField] private float acceleration;
+    [SerializeField] private float maxRotationY;
+    [SerializeField] private float rotateSpeedY;
     [SerializeField] private float maxRotationX;
     [SerializeField] private float rotateSpeedX;
-    [SerializeField] private float maxRotationZ;
-    [SerializeField] private float rotateSpeedZ;
+    [SerializeField] private float maxHeight;
+    [SerializeField] private float minHeight;
 
     // Inspector References
     [Header("References")]
@@ -28,8 +31,8 @@ public class PlayerController : MonoBehaviour {
     // Hidden Variables
     private float currentSpeed;
     private Vector3 direction;
+    private float rotateFactorY;
     private float rotateFactorX;
-    private float rotateFactorZ;
     private AudioSource aSource;
     #endregion
 
@@ -83,7 +86,7 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         DoRotation();
-        DoAcceleration();
+        //DoAcceleration();
         DoArrowUpdate();
 
         transform.position += (direction * currentSpeed * Time.deltaTime);
@@ -91,13 +94,52 @@ public class PlayerController : MonoBehaviour {
 
     private void DoRotation()
     {
+        // Y Rotation
         if (Input.GetKey(KeyCode.LeftArrow))
-            rotateFactorX = rotateFactorX >= -maxRotationX ? rotateFactorX -= rotateSpeedX : -maxRotationX;
+            rotateFactorY = rotateFactorY >= -maxRotationY ? rotateFactorY -= rotateSpeedY : -maxRotationY;
         else if (Input.GetKey(KeyCode.RightArrow))
-            rotateFactorX = rotateFactorX <= maxRotationX ? rotateFactorX += rotateSpeedX : maxRotationX;
+            rotateFactorY = rotateFactorY <= maxRotationY ? rotateFactorY += rotateSpeedY : maxRotationY;
         else
-            rotateFactorX = Mathf.Abs(rotateFactorX) >= 0.05f ? rotateFactorX *= 0.90f : 0;
-        transform.Rotate(new Vector3(0f, rotateFactorX, 0f));
+            rotateFactorY = Mathf.Abs(rotateFactorY) >= 0.05f ? rotateFactorY *= 0.90f : 0;
+        float rY = transform.localRotation.eulerAngles.y + rotateFactorY;
+
+        // Z Rotation and Acceleration
+        bool upKey = Input.GetKey(KeyCode.UpArrow);
+        bool downKey = Input.GetKey(KeyCode.DownArrow);
+        float Y = 0f;
+        if (upKey)
+        {
+            float eX = transform.localRotation.eulerAngles.x;
+            currentSpeed = currentSpeed <= maxSpeed ? currentSpeed += acceleration : maxSpeed;
+            rotateFactorX = (eX < maxRotationX) || (eX > 360 - maxRotationX * 1.5f ) ? rotateFactorX += rotateSpeedX : 0;
+            if (transform.position.y >= minHeight)
+                Y = -1f;
+        }
+        else if (downKey)
+        {
+            float eX = transform.localRotation.eulerAngles.x;
+            currentSpeed = currentSpeed >= minSpeed ? currentSpeed -= acceleration : minSpeed;
+            rotateFactorX = (eX > 360f - maxRotationX) || (eX <= maxRotationX * 1.5f) ? rotateFactorX -= rotateSpeedX : 0;
+            if (transform.position.y <= maxHeight)
+                Y = 1f;
+        }
+        else
+        {
+            currentSpeed = currentSpeed >= defaultSpeed ? currentSpeed -= acceleration : defaultSpeed;
+            float eX = transform.localRotation.eulerAngles.x;
+            if (eX > 1f && eX < 15f)
+                rotateFactorX = -(eX * 0.05f);
+            else if (eX < 359 && eX > 345f)
+                rotateFactorX = ((360 - eX) * 0.05f);
+            else
+                rotateFactorX = 0f;
+        }
+        gm.PlayerDash(upKey);
+        float rX = transform.localRotation.eulerAngles.x + rotateFactorX;
+        transform.localRotation = Quaternion.Euler(rX, rY, transform.localRotation.z);
+
+        //transform.Rotate(new Vector3(rotateFactorX, rotateFactorY, 0f));
+        //float aX = Mathf.Clamp(transform.localRotation.eulerAngles.x, -10f, 10f);
 
         float yAngle = transform.rotation.eulerAngles.y % 360;
         float ratio = Mathf.Tan(yAngle * Mathf.Deg2Rad);
@@ -105,13 +147,13 @@ public class PlayerController : MonoBehaviour {
         Vector3 newDir;
 
         if (yAngle >= 0 && yAngle < 90)
-            newDir = new Vector3(X, 0f, Z);
+            newDir = new Vector3(X, Y, Z);
         else if (yAngle >= 90 && yAngle < 180)
-            newDir = new Vector3(X, 0f, -Z);
+            newDir = new Vector3(X, Y, -Z);
         else if (yAngle >= 180 && yAngle < 270)
-            newDir = new Vector3(-X, 0f, -Z);
+            newDir = new Vector3(-X, Y, -Z);
         else if (yAngle >= 270 && yAngle < 360)
-            newDir = new Vector3(-X, 0f, Z);
+            newDir = new Vector3(-X, Y, Z);
         else
             newDir = new Vector3();
 
@@ -121,16 +163,10 @@ public class PlayerController : MonoBehaviour {
         direction = newDir.normalized;
     }
 
-    private void DoAcceleration()
-    {
-        bool upKey = Input.GetKey(KeyCode.UpArrow);
-        if (upKey)
-            currentSpeed = currentSpeed <= maxSpeed ? currentSpeed += acceleration : maxSpeed;
-        else
-            currentSpeed = currentSpeed >= defaultSpeed ? currentSpeed -= acceleration : defaultSpeed;
+    //private void DoAcceleration()
+    //{
 
-        gm.PlayerDash(upKey);
-    }
+    //}
 
     private void DoArrowUpdate()
     {

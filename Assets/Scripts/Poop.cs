@@ -14,7 +14,7 @@ public class Poop : MonoBehaviour {
     {
         direction *= 0.9f;
 
-        transform.position += new Vector3(direction.x, -0.5f, direction.z) * Time.deltaTime;
+        transform.position += new Vector3(direction.x, -1f, direction.z) * Time.deltaTime;
         lifetime -= Time.deltaTime;
         if (lifetime <= 0)
             Destroy(gameObject);
