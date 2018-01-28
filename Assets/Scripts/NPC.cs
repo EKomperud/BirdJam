@@ -27,9 +27,7 @@ public class NPC : MonoBehaviour {
         if (!isSpecialNPC)
         {
             transform.position += posDir * Time.deltaTime * speed;
-            direction.x = Mathf.Lerp(transform.position.x, posDir.x, Time.deltaTime*45f);
-            direction.z = Mathf.Lerp(transform.position.z, posDir.z, Time.deltaTime*45f);
-            gameObject.transform.forward = direction;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(posDir), Time.deltaTime*5f);
         }
 	}
     //Spawns normal NPCs
