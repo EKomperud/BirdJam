@@ -9,45 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1307599600339050}
+  m_RootGameObject: {fileID: 1264356627011352}
   m_IsPrefabParent: 1
---- !u!1 &1307599600339050
+--- !u!1 &1264356627011352
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4675539935936276}
-  - component: {fileID: 33832823385433342}
-  - component: {fileID: 23723406617717174}
-  - component: {fileID: 65110827543371950}
+  - component: {fileID: 4055007330821328}
+  - component: {fileID: 33204969413746440}
+  - component: {fileID: 23371605194075954}
+  - component: {fileID: 95113282089851194}
+  - component: {fileID: 65718202481139538}
   m_Layer: 0
-  m_Name: Mailbox
+  m_Name: DoNotEnterSignAsset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4675539935936276
+--- !u!4 &4055007330821328
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1307599600339050}
-  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.088, z: 0}
-  m_LocalScale: {x: 0.25632387, y: 0.2563239, z: 0.2563239}
+  m_GameObject: {fileID: 1264356627011352}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.00000044703478}
+  m_LocalPosition: {x: 90.409, y: 0.627, z: 65.449}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
---- !u!23 &23723406617717174
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+--- !u!23 &23371605194075954
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1307599600339050}
+  m_GameObject: {fileID: 1264356627011352}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,8 +57,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7c6a6bc8255a1dc46b886b20db9f0c62, type: 2}
-  - {fileID: 2100000, guid: ecded79075a53c14bbcff6ebb404e426, type: 2}
+  - {fileID: 2100000, guid: 54396a84ff8794141b2d005e238bd3cd, type: 2}
+  - {fileID: 2100000, guid: 1466b3c1663fb4b4cb5718a94dcf00d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,22 +78,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33832823385433342
+--- !u!33 &33204969413746440
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1307599600339050}
-  m_Mesh: {fileID: 4300000, guid: 93eabfaf9335e8e4aa87d7c447a09b59, type: 3}
---- !u!65 &65110827543371950
+  m_GameObject: {fileID: 1264356627011352}
+  m_Mesh: {fileID: 4300000, guid: 033eb74633db4f646ac1f0f3682fd601, type: 3}
+--- !u!65 &65718202481139538
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1307599600339050}
+  m_GameObject: {fileID: 1264356627011352}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5077215, y: 1.2851269, z: 0.46163765}
-  m_Center: {x: 0, y: 0.6431074, z: 0}
+  m_Size: {x: 0.19155884, y: 2.3870163, z: 0.08897887}
+  m_Center: {x: 0.0033314526, y: 0, z: -6.53469e-17}
+--- !u!95 &95113282089851194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264356627011352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 033eb74633db4f646ac1f0f3682fd601, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
