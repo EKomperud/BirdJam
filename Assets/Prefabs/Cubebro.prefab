@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1831357009323584}
+  m_RootGameObject: {fileID: 1511318613959894}
   m_IsPrefabParent: 1
---- !u!1 &1831357009323584
+--- !u!1 &1511318613959894
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4020535734278998}
-  - component: {fileID: 33219320302528132}
-  - component: {fileID: 23644999156945758}
-  - component: {fileID: 65991153544634856}
+  - component: {fileID: 4999287207962380}
+  - component: {fileID: 33869162299360860}
+  - component: {fileID: 65889432555300574}
+  - component: {fileID: 23967157896457198}
   m_Layer: 0
-  m_Name: Hot-dog stand
+  m_Name: Cubebro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4020535734278998
+--- !u!4 &4999287207962380
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831357009323584}
-  m_LocalRotation: {x: -0, y: 0.69699347, z: -0, w: 0.7170775}
-  m_LocalPosition: {x: -23.982628, y: 1.1082172, z: -9.777222}
-  m_LocalScale: {x: 0.6174204, y: 0.61742026, z: 0.6174204}
+  m_GameObject: {fileID: 1511318613959894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 113.21646, y: 0.678, z: 68.2999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 88.373, z: 0}
---- !u!23 &23644999156945758
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23967157896457198
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831357009323584}
+  m_GameObject: {fileID: 1511318613959894}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,15 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f0a5e4d6ba85e4e14941c94b5ff2fa83, type: 2}
-  - {fileID: 2100000, guid: ef460f2878d56fa42a7785119e9145cc, type: 2}
-  - {fileID: 2100000, guid: 8a22a5c47f2c89d4eb854539d971c5a8, type: 2}
-  - {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
-  - {fileID: 2100000, guid: 2dcfa93a64ea0494a954a595490aae2c, type: 2}
-  - {fileID: 2100000, guid: 0919b3897df406243a5933d17feefc31, type: 2}
-  - {fileID: 2100000, guid: e3b13d4880eb05a40a14154ccef02e2c, type: 2}
-  - {fileID: 2100000, guid: 41eaa32a86ddc4086adfe8725d7389e9, type: 2}
-  - {fileID: 2100000, guid: acdd2fc61de4845209d23e0520c4faf8, type: 2}
+  - {fileID: 2100000, guid: 0b5a75d67acacbd4286d025333807560, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,7 +64,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -84,22 +76,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33219320302528132
+--- !u!33 &33869162299360860
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831357009323584}
-  m_Mesh: {fileID: 4300000, guid: ec83e35ed04a64ae5b9fac6ce05f3c6d, type: 3}
---- !u!65 &65991153544634856
+  m_GameObject: {fileID: 1511318613959894}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65889432555300574
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1831357009323584}
+  m_GameObject: {fileID: 1511318613959894}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9141282, y: 1.5235201, z: 0.7783624}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

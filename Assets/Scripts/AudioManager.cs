@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour {
 
     static AudioManager _instance;
@@ -34,7 +34,15 @@ public class AudioManager : MonoBehaviour {
         //audioSource.clip = ambience.sounds[0];
         //audioSource.clip = poopSound.sounds[3];
         //audioSource.Play();
-        StartCoroutine(PlayBGM());
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            StartCoroutine(PlayBGM());
+        }
+        else
+        {
+            PlayMenuBGM();
+        }
+        
     }
 
     public void PlayAmbience(){
