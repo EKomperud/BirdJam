@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public GameData data;
     private int NPCCount;
     private int minPop;
+    private float populationTimer;
     private int currentSpawn;
     public PlayerController player;
     private static GameManager instance = null;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour {
         data.score = 0;
         data.pooHits = 0;
         minPop = 20;
+        populationTimer = 0f;
         currentSpawn = 0;
         if (instance != null && instance != this)
             Destroy(gameObject);
@@ -81,8 +83,12 @@ public class GameManager : MonoBehaviour {
             data.poopSize += (Time.deltaTime * player.GetSpeed()) / 2f;
         }
 
-        if (seconds % 5 == 0)
-            minPop+=2;
+        populationTimer += Time.deltaTime;
+        if (populationTimer >= 5)
+        {
+            populationTimer = 0;
+            minPop += 2;
+        }
     }
 
     public void endGame()
