@@ -65,8 +65,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject go = other.gameObject;
         Debug.Log("Player collision");
-        if (other.transform.parent.tag.Equals("Terrain"))
+        string tagThis = go.tag;
+        string tagParent = go.transform.parent.tag;
+        if (tagThis.Equals("Terrain") || tagParent.Equals("Terrain"))
         {
             ParticleSystem p = Instantiate(poof) as ParticleSystem;
             p.transform.position = transform.position;
@@ -104,7 +107,7 @@ public class PlayerController : MonoBehaviour {
 
     private IEnumerator Death()
     {
-        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(0).gameObject.SetActive(false);
         float delay = 2f;
         float timer = 0f;
         while (timer <= delay)
