@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    private void endGame()
+    public void endGame()
     {
         //player.control = false;
         data.clock.Stop();
@@ -131,7 +131,6 @@ public class GameManager : MonoBehaviour {
     //creates normies
     void createNPC(int index)
     {
-        UnityEngine.Debug.Log("Spawning");
         Transform n = Instantiate(NPCPrefab) as Transform;
         Vector3 tempPos = spawnPoints[index].transform.position;
         tempPos.y = 0;
