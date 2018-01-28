@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3429b5f08c9fe4cc98d3b8bab2cb1c5b, type: 3}
+  m_Name: Audio_Menu
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 750ffdb8c14534f44b1462f41d4d03e0, type: 3}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 879bb217803e6ac488485c8c84d4447d
-timeCreated: 1517084950
+guid: 173883bb092bbb54e81325367d4acfef
+timeCreated: 1517084011
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -21,22 +21,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Blue
-    second: {fileID: 2100000, guid: 529e012c3ae415b4ca61903dabe86660, type: 2}
+    second: {fileID: 2100000, guid: 1efc207c5cb1baa459e50ef1bef38037, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Letter
-    second: {fileID: 2100000, guid: 18fc414ac0e5bdc4788a78f3e6d24ff8, type: 2}
+    second: {fileID: 2100000, guid: 1f34c670706e47949ae0e595244a10ad, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Red
-    second: {fileID: 2100000, guid: 001fb01e08939404f8148f2864a6a480, type: 2}
+    second: {fileID: 2100000, guid: 4c30589949127dd4ba3f077eb1af56eb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: yellow
-    second: {fileID: 2100000, guid: 2670b631da2881246a3ec55ec91f20f2, type: 2}
+    second: {fileID: 2100000, guid: 81ccffaed64765e47a9333124ecf65c2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
