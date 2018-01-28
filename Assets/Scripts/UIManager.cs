@@ -23,7 +23,8 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
         hidePaused();
-
+        //gData.createTimer();
+        //gData.startTimer();
         //setting alpha channel to 0
         SetTranspernecy(0);
         //gData.createTimer();

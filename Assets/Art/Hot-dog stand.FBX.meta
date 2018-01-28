@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c268e455b71400a4aaf1b0a4bfed0aeb
-timeCreated: 1517086236
+guid: ec83e35ed04a64ae5b9fac6ce05f3c6d
+timeCreated: 1517090382
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -31,17 +31,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hotdog_bun
-    second: {fileID: 2100000, guid: 140c7d27e1eff744191c624d88774a5e, type: 2}
+    second: {fileID: 2100000, guid: 41eaa32a86ddc4086adfe8725d7389e9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Light_brown
-    second: {fileID: 2100000, guid: 398571f9200d72a4d86ab72b402aa115, type: 2}
+    second: {fileID: 2100000, guid: f0a5e4d6ba85e4e14941c94b5ff2fa83, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Red
-    second: {fileID: 2100000, guid: b85a6891bf02a5f429070d5c114872ee, type: 2}
+    second: {fileID: 2100000, guid: 7c6d1a2401c7b4b72afd6fb771d267a2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -56,7 +56,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: sausage
-    second: {fileID: 2100000, guid: 2fb5c0624855b9e48a18a12acfb7c6af, type: 2}
+    second: {fileID: 2100000, guid: acdd2fc61de4845209d23e0520c4faf8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
