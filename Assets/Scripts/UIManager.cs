@@ -13,10 +13,11 @@ public class UIManager : MonoBehaviour {
     //public Text poopText;
     public Image poopAlertPanel;
     //temp until fused with game manager
-    public Stopwatch clock;
+    //public Stopwatch clock;
     public Slider poopSlider;
     public Slider timeSlider;
     public Image orbCounter;
+    public int totalTime;
     // Use this for initialization
     void Start()
     {
@@ -27,10 +28,10 @@ public class UIManager : MonoBehaviour {
         SetTranspernecy(0);
         //gData.createTimer();
         //gData.startTimer();
-        clock = new Stopwatch();
-        clock.Start();
+        //clock = new Stopwatch();
+        //clock.Start();
         poopSlider.value = gData.poopSize;
-        timeSlider.value = 100;
+        timeSlider.value = totalTime;
 
         //orbCounter.color
     }
@@ -45,14 +46,14 @@ public class UIManager : MonoBehaviour {
             if (Mathf.Equals(Time.timeScale, 1f))
             {
                 Time.timeScale = 0;
-                clock.Stop();
+                gData.clock.Stop();
                 showPaused();
             }
             else if (Time.timeScale == 0)
             {
                 //Debug.Log("high");
                 Time.timeScale = 1;
-                clock.Start();
+                gData.clock.Start();
                 hidePaused();
             }
         }
@@ -109,12 +110,13 @@ public class UIManager : MonoBehaviour {
     public void UpdateGUI()
     {
         //poopText.text = gData.poopSize.ToString() ;
-        float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
+        //float clocknumtest = clock.ElapsedMilliseconds / 10000.0f;
         //poopText.text = ((int)(clock.ElapsedMilliseconds / 1000)).ToString();
-        SetTranspernecy(clock.ElapsedMilliseconds / 10000.0f);
-        poopSlider.value = ((int)(clock.ElapsedMilliseconds / 100));
-        timeSlider.value = 100 - (int)(clock.ElapsedMilliseconds / 100);
-        SetOrbColor(clocknumtest,clocknumtest);
+        SetTranspernecy((float)gData.poopSize/6.0f);
+        poopSlider.value = gData.poopSize;//((int)(clock.ElapsedMilliseconds / 100));
+        timeSlider.value = totalTime - (int)(gData.clock.ElapsedMilliseconds / 1000);
+        SetOrbColor((float)gData.pooHits * 0.1f, (float)gData.pooHits * 0.1f);
+        //SetOrbColor(clocknumtest,clocknumtest);
     }
 
 
