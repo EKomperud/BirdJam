@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (seconds > 299)
+        if (seconds > 60)
         {
             endGame();
         }
