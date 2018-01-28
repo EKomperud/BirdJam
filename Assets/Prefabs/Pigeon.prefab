@@ -247,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496695397442400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.85, z: 2}
+  m_LocalPosition: {x: 71.67498, y: 2, z: 78.09383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4058593712626284}
@@ -305,7 +305,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963337760052518}
   m_LocalRotation: {x: 0.3627654, y: -0, z: -0, w: 0.9318805}
-  m_LocalPosition: {x: 0, y: 1.02, z: -0.91}
+  m_LocalPosition: {x: 0, y: 1.02, z: -1.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4530274231601196}
@@ -451,13 +451,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1341040d6f211468016e1e4c0dad98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 1
-  maxSpeed: 2
+  defaultSpeed: 2
+  maxSpeed: 3
+  minSpeed: 2
   acceleration: 0.05
-  maxRotationX: 2
-  rotateSpeedX: 0.11
-  maxRotationZ: 40
-  rotateSpeedZ: 0.5
+  maxRotationY: 2
+  rotateSpeedY: 0.11
+  maxRotationX: 10
+  rotateSpeedX: 0.5
+  maxHeight: 10
+  minHeight: 1
   poopPrefab: {fileID: 4680475823584730, guid: 15f1d31740b71c14e9ffd544905ee298, type: 2}
   data: {fileID: 11400000, guid: c0e7f0d7191e09f418f2e8c67af4c283, type: 2}
   arrow: {fileID: 4836792164297010}

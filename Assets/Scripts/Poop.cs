@@ -8,22 +8,36 @@ public class Poop : MonoBehaviour {
 
     private float size;
     private Vector3 direction;
+    private GameManager gm;
 
     private void FixedUpdate()
     {
         direction *= 0.9f;
 
-        transform.position += new Vector3(direction.x, -0.5f, direction.z) * Time.deltaTime;
+        transform.position += new Vector3(direction.x, -1f, direction.z) * Time.deltaTime;
         lifetime -= Time.deltaTime;
         if (lifetime <= 0)
             Destroy(gameObject);
     }
 
-    public void SpawnPoop(Vector3 position, Vector3 direction, float size)
+    public void SpawnPoop(Vector3 position, Vector3 direction, float size, GameManager gm)
     {
         transform.position = position;
         this.direction = direction;
         transform.localScale = transform.localScale *= size;
         this.size = size;
+        this.gm = gm;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Successful poop");
+        NPC npc;
+        npc = other.gameObject.GetComponent<NPC>();
+        if (npc != null)
+        {
+            gm.collidedPoop(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

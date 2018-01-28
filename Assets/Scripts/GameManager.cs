@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 
     public GameData data;
     private int NPCCount;
+    private int minPop;
+    private int currentSpawn;
     public PlayerController player;
     private static GameManager instance = null;
     [SerializeField] private Camera cam;
@@ -22,7 +24,8 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        minPop = 20;
+        currentSpawn = 0;
         if (instance != null && instance != this)
             Destroy(gameObject);
         instance = this;
@@ -30,7 +33,6 @@ public class GameManager : MonoBehaviour {
         data.clock = new Stopwatch();
         data.clock.Start();
 
-        data.spawnPoints = new List<GameObject>();
         updateNPCCount(1);
         random = new System.Random();
 
@@ -46,6 +48,15 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(NPCCount <= minPop)
+        {
+            if(currentSpawn > data.spawnPoints.Count - 1)
+            {
+                currentSpawn = 0;
+            }
+            createNPC(currentSpawn);
+            currentSpawn++;
+        }
         if (seconds > 60)
         {
             endGame();
@@ -101,15 +112,13 @@ public class GameManager : MonoBehaviour {
     }
 
     //creates normies
-    void createNPC(int amount)
+    void createNPC(int index)
     {
-        randomIndex = random.Next(0, data.spawnPoints.Count);
         Transform n = Instantiate(NPCPrefab) as Transform;
-        Vector3 tempPos = data.spawnPoints[randomIndex].transform.position;
-        //NPC npc = new NPC(tempPos);
+        Vector3 tempPos = data.spawnPoints[index].transform.position;
         NPC npc = n.GetComponent<NPC>();
         npc.spawnNPC(tempPos);
-        updateNPCCount(amount);
+        updateNPCCount(1);
     }
 
     void updateNPCCount(int increment)
@@ -139,7 +148,13 @@ public class GameManager : MonoBehaviour {
         createPickUp();
     }
 
-    void despawnNPC()
+    public void collidedPoop(GameObject person)
+    {
+        data.score -= 100;
+        Destroy(person);
+    }
+
+    public void despawnNPC()
     {
         NPCCount--;
     }
@@ -188,6 +203,11 @@ public class GameManager : MonoBehaviour {
             cam.fieldOfView = cam.fieldOfView < data.maxCamDistance ? cam.fieldOfView += data.camAcceleration : data.maxCamDistance;
         else
             cam.fieldOfView = cam.fieldOfView > data.defaultCamDistance ? cam.fieldOfView -= (data.camAcceleration*2) : data.defaultCamDistance;
+    }
+
+    public void updateMinPop(int amount)
+    {
+        
     }
 
 }
