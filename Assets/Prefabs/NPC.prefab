@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33284308560928448}
   - component: {fileID: 23765258544518972}
   - component: {fileID: 114960976482577008}
+  - component: {fileID: 54337902625664934}
+  - component: {fileID: 136805666369267642}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -82,7 +84,22 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212543443348938}
-  m_Mesh: {fileID: 4300000, guid: d5cc858506bca044997013b26b4cce28, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 0c62def18b4eed246859a8a1bfd27646, type: 3}
+--- !u!54 &54337902625664934
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212543443348938}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114960976482577008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,4 +111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc3e3a815d86143970b930457f7831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
+  data: {fileID: 0}
+  gm: {fileID: 0}
+  speed: 0
+--- !u!136 &136805666369267642
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212543443348938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.06
+  m_Height: 0.46346894
+  m_Direction: 1
+  m_Center: {x: -0.000000022351742, y: 0.23164178, z: -0.009165615}
