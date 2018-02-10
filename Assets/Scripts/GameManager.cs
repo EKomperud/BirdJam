@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour {
             createNPC(currentSpawn);
             currentSpawn++;
         }
-        if (seconds > 150)
+        if (seconds > 60)
         {
             endGame();
         }
@@ -99,10 +99,8 @@ public class GameManager : MonoBehaviour {
         //SceneManager.LoadScene("GameOver");
         if (data.pooHits >= 5)
             SceneManager.LoadScene("BadEnding");
-        else if (data.score >= 200)
-            SceneManager.LoadScene("GoodEnding");
         else
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GoodEnding");
     }
 
 
